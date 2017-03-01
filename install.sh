@@ -153,7 +153,7 @@ install_dotfolders () {
   local overwrite_all=false backup_all=false skip_all=false
 
   # for src in $(find -H "$DOTFILES_LN" -maxdepth 2 -name '.*' -not -path '*.git*')
-  for src in $(find -H "$DOTFILES_LN" -mindepth 1 -maxdepth 1 -type d -name '.*')
+  for src in $(find -H "$DOTFILES_LN" -mindepth 1 -maxdepth 1 -type d -name '.*'  -not -path '*.git*')
   do
   	# tmp=${src#*_} -> remove prefix ending with "." 
     dst="$HOME/$(basename "${src#*.}")"
