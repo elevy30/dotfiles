@@ -1,0 +1,46 @@
+[user]
+	name = eyal.levy
+	email = eyal.levy
+[alias]
+	lg    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	ll    = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat
+ 	lga   = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+ 	lla   = log --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --decorate --numstat
+	please   = push --force-with-lease
+	commend  = commit --amend --no-edit
+	it       = !git init && git commit -m “root” --allow-empty
+	stsh     = stash --keep-index
+	staash   = stash --include-untracked
+	staaash  = stash --all
+	shorty   = status --short --branch
+	merc     = merge --no-ff
+	grog     = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+	pullr    = pull --rebase
+	f        = !git ls-files | grep -i
+	la       = !git config -l | grep alias | cut -c 7-
+[core]
+	excludesfile = ~/.gitignore
+	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -w
+	pager  = less -+S -FXR
+	ignorecase = false
+	autocrlf = input
+[push]
+	default = simple
+[mergetool]
+	keepBackup = false
+[color]
+	branch      = true
+	diff        = true
+	decorate    = true
+	grep        = true
+	interactive = true
+	showbranch  = true
+	status      = true
+	ui          = true
+[color "status"]
+	added = red normal bold
+	changed = green
+	untracked = magenta
+	deleted = yellow normal bold
+[include]
+	path = ~/.gitconfig.local
