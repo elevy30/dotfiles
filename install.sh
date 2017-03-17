@@ -163,7 +163,7 @@ install_dotfolders () {
 }
 
 link_main_folder
-setup_gitconfig
+#setup_gitconfig
 install_dotfiles
 install_dotfolders
 

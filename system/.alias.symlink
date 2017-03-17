@@ -1,6 +1,4 @@
 
-
-
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #Cassandra
@@ -9,13 +7,9 @@ export CQLSH_NO_BUNDLED=true
 #ssh key for working with thetaray machine 
 ssh-add ~/.ssh/tr-key.pem
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/opt/python/anaconda3/bin:$PATH"
-
 export ZSH="~/.oh-my-zsh"
 sudo chsh -s /usr/bin/zsh eyallevy
 #sudo chsh -s /bin/bash eyallevy
-
 
 #Git  
 alias cdgt="cd /opt/Dropbox/dev/git"
