@@ -21,7 +21,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	pager  = less -+S -FXR
-	editor = /usr/bin/subl
+	editor = /usr/bin/subl -n -w
 	ignorecase = false
 	autocrlf = input
 [push]

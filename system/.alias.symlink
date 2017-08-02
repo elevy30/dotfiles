@@ -5,12 +5,36 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export CQLSH_NO_BUNDLED=true
 
 #ssh key for working with thetaray machine 
-ssh-add ~/.ssh/tr-key.pem
+echo "THIS TERMINAL DOES NOT ADD THE THETARAY KEY TO THE SSH ssh-add ~/.ssh/tr-key.pem was commented out "
+#ssh-add ~/.ssh/tr-key.pem
 
 export ZSH="~/.oh-my-zsh"
-sudo chsh -s /usr/bin/zsh eyallevy
+#sudo chsh -s /usr/bin/zsh eyallevy
 #sudo chsh -s /bin/bash eyallevy
 
 #Git  
-alias cdgt="cd /opt/Dropbox/dev/git"
-alias gts="git status"
+alias gst="cd /opt/dev/git;find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;"
+
+#Maven  
+alias mvdc="cd /opt/dev/git/detection-center;mvn clean install -P all"
+alias mvsp="cd /opt/dev/git/tr-spark-ml;mvn clean install"
+alias mvpo="cd /opt/dev/git/tr-post-analysis-apps;mvn clean install"
+
+#SPARK
+alias tail_spark="tail -f /opt/spark-2.0.2/logs/*.out /opt/spark-2.0.2/logs/spark-driver.log"
+#export SPARK_WORKER_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4001,suspend=n"
+#export SPARK_MASTER_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4002,suspend=n"
+
+alias update_jar="cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-splitter-job/target/uber-tr-splitter-job-2.2.1-SNAPSHOT.jar /opt/tr/lib/tr-splitter-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-upload-job/target/uber-tr-upload-job-2.2.1-SNAPSHOT.jar /opt/tr/lib/tr-upload-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-build-job/target/uber-tr-build-job-2.2.1-SNAPSHOT.jar /opt/tr/lib/tr-build-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-integrity-job/target/uber-tr-integrity-job-2.2.1-SNAPSHOT.jar /opt/tr/lib/tr-integrity-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/spark-wrapper-job/target/uber-spark-wrapper-job-2.2.1-SNAPSHOT.jar /opt/tr/lib/spark-wrapper-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/webapps/tr-data-loader/target/data-loader.jar /opt/tr/lib/data-loader.jar; \
+                  cp /opt/dev/git/tr-spark-ml/webapps/spark-job-manager/target/spark-job-manager.jar /opt/tr/lib/spark-job-manager.jar;"
+
+if [ -f ~/tr_bash.sh ]; then
+    source ~/
+else
+    print "404: ~/tr_bash.sh not found."
+fi

@@ -84,7 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+ssh-add ~/.ssh/tr-key.pem 
+
 source ~/.alias
 source ~/.path_update
-
-
+source ~/tr_bash.sh
