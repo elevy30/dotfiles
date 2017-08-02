@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+
+sshr() {
+  ssh -i $HOME/.ssh/tr-key.pem ec2-user@172.16.1.$1
+}
+
+sshu() {
+  ssh -i $HOME/.ssh/tr-key.pem ubuntu@172.16.1.$1
+}
+
+scpft() {
+  if [ "$#" -ne 6 ]; then
+    echo "Usage: scpft u 5 /path/fileOrFolder r 6 /target/path"
+    return
+  fi
+  if [ $1 = "u" ]; then
+    user1=ubuntu
+  elif [ $1 = "r" ]; then
+    user1=ec2-user
+  else
+    echo "Supported flags are 'u' and 'r'"
+    return
+  fi
+  if [ $4 = "u" ]; then
+    user2=ubuntu
+  elif [ $4 = "r" ]; then
+    user2=ec2-user
+  else
+    echo "Supported flags are 'u' and 'r'"
+    return
+  fi
+
+  scp -i $HOME/.ssh/tr-key.pem -r -o "ForwardAgent=yes" $user1@172.16.1.$2:$3 $user2@172.16.1.$5:$6
+}
+
+awsup() {
+  if [ -z "$1" ]; then
+    echo "Usage: awsup [Last digits of IP address]"
+    return
+  fi
+
+  instance_id="$(aws ec2 describe-instances --filters "Name=private-ip-address,Values=172.16.1.$1" | jq -r '.Reservations[0].Instances[0].InstanceId')"
+  if [ $instance_id != "null" ]; then
+    aws ec2 start-instances --instance-ids $instance_id
+  else
+    echo "Machine 172.16.1.$1 does not exist."
+  fi
+}
+
+awskill() {
+  if [ -z "$1" ]; then
+    echo "Usage: awskill [Last digits of IP address]"
+    return
+  fi
+
+  instance_id="$(aws ec2 describe-instances --filters "Name=private-ip-address,Values=172.16.1.$1" | jq -r '.Reservations[0].Instances[0].InstanceId')"
+  if [ $instance_id != "null" ]; then
+    aws ec2 terminate-instances --instance-ids $instance_id
+  else
+    echo "Machine 172.16.1.$1 does not exist."
+  fi
+}
+
+checkout_all() {
+   cd "/opt/dev/git/tr-common"
+   git checkout $1
+   git pull
+   
+   cd "/opt/dev/git/tr-deployment"
+   git checkout $1
+   git pull
+   
+   cd "/opt/dev/git/tr-post-analysis-apps"
+   git checkout $1
+   git pull
+
+   cd "/opt/dev/git/detection-center"
+   git checkout $1
+   git pull
+
+   cd "/opt/dev/git/tr-spark-ml"
+   git checkout $1
+   git pull
+   
+}
+
+install_all() {
+   cd "/opt/dev/git/tr-common"
+   mvn clean install -U
+   
+   cd "/opt/dev/git/tr-deployment"
+   mvn clean install -U
+   
+   cd "/opt/dev/git/tr-post-analysis-apps"
+   mvn clean install -U
+
+   cd "/opt/dev/git/detection-center"
+   mvn clean install -U -P all
+
+   cd "/opt/dev/git/tr-spark-ml"
+   mvn clean install -U
+   
+}
+
+merge_master() {
+   cd "/opt/dev/git/tr-common"
+   git pull
+   git pull origin master
+   
+   cd "/opt/dev/git/tr-deployment"
+   git pull
+   git pull origin master
+   
+   cd "/opt/dev/git/tr-post-analysis-apps"
+   git pull
+   git pull origin master
+
+   cd "/opt/dev/git/detection-center"
+   git pull
+   git pull origin master
+
+   cd "/opt/dev/git/tr-spark-ml"
+   git pull
+   git pull origin master
+   
+}
+
+
+push_all() {
+   cd "/opt/dev/git/tr-common"
+   git pull
+   git push
+   
+   cd "/opt/dev/git/tr-deployment"
+   git pull
+   git push
+   
+   cd "/opt/dev/git/tr-post-analysis-apps"
+   git pull
+   git push
+
+   cd "/opt/dev/git/detection-center"
+   git pull
+   git push
+
+   cd "/opt/dev/git/tr-spark-ml"
+   git pull
+   git push
+   
+}
