@@ -89,3 +89,6 @@ ssh-add ~/.ssh/tr-key.pem
 source ~/.alias
 source ~/.path_update
 source ~/tr_bash.sh
+
+
+ssh-add ~/.ssh/tr-key.pem

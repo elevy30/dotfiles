@@ -148,3 +148,10 @@ push_all() {
    git push
    
 }
+
+docker_start() {
+  docker start kafka-local
+  docker start zookeeper-local
+  docker start tr-postgres
+  docker start tr-activemq 
+}

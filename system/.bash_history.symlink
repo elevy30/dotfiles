@@ -499,3 +499,27 @@ idea.sh
 exit
 exit
 start-dfs.sh
+gksudo bash ~/Downloads/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt install gksu
+gksudo bash ~/Downloads/VMware-Player-6.0.2-1744117.x86_64.bundle
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt-get install libcanberra-gtk*
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt-get install libcanberra-gtk3-module
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt-get install libcanberra-gtk-module:i386
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle 
+vmware
+which vmware
+where is vmware
+gcc -v
+sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+chmod 777 /var/lib/dpkg/lock
+sudo chmod 777 /var/lib/dpkg/lock
+sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+sudo chmod 777 /var/cache/apt/archives/lock
+sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+sudo sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+vmware-view %u
+sudo apt install libpng16-16 
+vmware-view %u
