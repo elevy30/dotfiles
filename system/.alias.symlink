@@ -21,16 +21,17 @@ alias mvsp="cd /opt/dev/git/tr-spark-ml;mvn clean install"
 alias mvpo="cd /opt/dev/git/tr-post-analysis-apps;mvn clean install"
 
 #SPARK
-alias tail_spark="tail -f /opt/spark-2.0.2/logs/*.out /opt/spark-2.0.2/logs/spark-driver.log"
+alias tail_spark="tail -f /opt/spark-2.2.0/logs/*.out /opt/spark-2.2.0/logs/spark-driver.log"
 #export SPARK_WORKER_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4001,suspend=n"
 #export SPARK_MASTER_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4002,suspend=n"
 
-alias update_jar="cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-splitter-job/target/uber-tr-splitter-job-2.2.2-MVP-5076-SNAPSHOT.jar /opt/tr/lib/tr-splitter-job.jar; \
-				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-upload-job/target/uber-tr-upload-job-2.2.2-MVP-5076-SNAPSHOT.jar /opt/tr/lib/tr-upload-job.jar; \
-				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-build-job/target/uber-tr-build-job-2.2.2-MVP-5076-SNAPSHOT.jar /opt/tr/lib/tr-build-job.jar; \
-				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-integrity-job/target/uber-tr-integrity-job-2.2.2-MVP-5076-SNAPSHOT.jar /opt/tr/lib/tr-integrity-job.jar; \
-                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-traceback-context-job/target/uber-tr-traceback-context-job-2.2.2-MVP-5076-SNAPSHOT.jar /opt/tr/lib/tr-traceback-context-job.jar; \
-                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/spark-wrapper-job/target/uber-spark-wrapper-job-2.2.2-MVP-5076-SNAPSHOT.jar /opt/tr/lib/spark-wrapper-job.jar; \
+alias update_jar="cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-splitter-job/target/uber-tr-splitter-job-3.2.0-MVP-5273-SNAPSHOT.jar /opt/tr/lib/tr-splitter-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-upload-job/target/uber-tr-upload-job-3.2.0-MVP-5273-SNAPSHOT.jar /opt/tr/lib/tr-upload-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-build-job/target/uber-tr-build-job-3.2.0-MVP-5273-SNAPSHOT.jar /opt/tr/lib/tr-build-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-integrity-job/target/uber-tr-integrity-job-3.2.0-MVP-5273-SNAPSHOT.jar /opt/tr/lib/tr-integrity-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-traceback-context-job/target/uber-tr-traceback-context-job-3.2.0-MVP-5273-SNAPSHOT.jar /opt/tr/lib/tr-traceback-context-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-profile-job/target/uber-tr-profile-job-3.2.0-MVP-5273-SNAPSHOT.jar /opt/tr/lib/tr-profile-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/spark-wrapper-job/target/uber-spark-wrapper-job-3.2.0-MVP-5273-SNAPSHOT.jar /opt/tr/lib/spark-wrapper-job.jar; \
                   cp /opt/dev/git/tr-spark-ml/webapps/tr-data-loader/target/data-loader.jar /opt/tr/lib/data-loader.jar; \
                   cp /opt/dev/git/tr-spark-ml/webapps/spark-job-manager/target/spark-job-manager.jar /opt/tr/lib/spark-job-manager.jar;"
 
