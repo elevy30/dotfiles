@@ -1,0 +1,19 @@
+
+#!/usr/bin/env bash
+
+myssh(){
+	#ssh-keygen -f "/home/eyallevy/.ssh/known_hosts" -R 172.18.$1
+	#ssh-keyscan -H 172.18.$1 >> ~/.ssh/known_hosts
+	
+	#scp -i ~/.ssh/tr-key.pem ~/tr_remote.sh tr-key@172.18.$1:/tmp
+	#ssh -i ~/.ssh/tr-key.pem thetaray@172.18.$1 -t "cd /Data/thetaray;source tr_remote.sh; bash --login"
+
+	scp ~/tr_remote.sh tr-key@172.18.$1:/tmp
+	#ssh -o StrictHostKeyChecking=no thetaray@172.18.$1 -t "sudo cp /tmp/tr_remote.sh /home/thetaray"
+	#ssh thetaray@172.18.$1 -t "sudo echo 'source /tmp/tr_remote.sh' >> ~/.bashrc"
+
+
+	#https://superuser.com/questions/19563/how-do-i-skip-the-known-host-question-the-first-time-i-connect-to-a-machine-vi
+	echo I added  'StrictHostKeyChecking no' to my ~/.ssh/config
+	ssh thetaray@172.18.$1 -t "sudo echo 'source /tmp/tr_remote.sh' >> ~/.bashrc; cd /Data/thetaray; bash --login"
+}

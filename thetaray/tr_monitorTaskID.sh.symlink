@@ -1,0 +1,2 @@
+IP1=$1;TASKID=$2;Command="tail -f /Data/thetaray/algo-server/analysis-job/*/$TASKID/algo.log";
+ssh -n -i tr-key.pem tr-key@172.18.0.$IP1 $Command;

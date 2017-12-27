@@ -1,0 +1,3 @@
+IP1=$1;IP2=$2;IP3=$3;IP4=$4;
+Command="tail -f /Data/thetaray/*/*/logs/*.log -f /Data/thetaray/*/*/*/*.log  -f /Data/thetaray/*/*/*/*.out /Data/thetaray/algo-server/analysis-job/*/*/algo.log";
+ssh -n -i tr-key.pem tr-key@172.18.0.$IP1 $Command &  ssh -n -i tr-key.pem tr-key@172.18.0.$IP2 $Command & ssh -n -i tr-key.pem tr-key@172.18.0.$IP3  $Command & ssh -n -i tr-key.pem tr-key@172.18.0.$IP4 $Command ;

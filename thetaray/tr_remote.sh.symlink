@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+dockerps() {
+	# clear;clear;clear;
+	# echo "172.18.0."$1":"
+	
+	# ssh-keygen -f "/home/alonevenhaim/.ssh/known_hosts" -R 172.18.0.$1
+	# ssh-keygen -f "/home/alonevenhaim/.ssh/known_hosts" -R 172.18.0.$2
+	# ssh-keygen -f "/home/alonevenhaim/.ssh/known_hosts" -R 172.18.0.$3
+	# ssh-keygen -f "/home/alonevenhaim/.ssh/known_hosts" -R 172.18.0.$4
+
+	#ssh -i tr-key.pem thetaray@172.18.0.$1 "docker ps --format={{.Names}} | cut -f1 -d'.'"  
+	#echo ""; echo "172.18.0."$2":"
+	#ssh -i tr-key.pem thetaray@172.18.0.$2 "docker ps --format={{.Names}} | cut -f1 -d'.'"
+	#echo "";echo "172.18.0."$3":"
+	#ssh -i tr-key.pem thetaray@172.18.0.$3 "docker ps --format={{.Names}} | cut -f1 -d'.'"
+	#echo "";echo "172.18.0."$4":"
+	#ssh -i tr-key.pem thetaray@172.18.0.$4 "docker ps --format={{.Names}} | cut -f1 -d'.'"
+
+	docker ps --format={{.Names}} 
+}
+
+name() {
+	docker ps --format={{.Names}} | grep $1
+}
+
+tail_all(){
+	tail -f /Data/thetaray/*/*/logs/*.log -f /Data/thetaray/*/*/*/*.log
+}
+
