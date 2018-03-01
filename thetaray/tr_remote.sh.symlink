@@ -17,7 +17,7 @@ dockerps() {
 	#echo "";echo "172.18.0."$4":"
 	#ssh -i tr-key.pem thetaray@172.18.0.$4 "docker ps --format={{.Names}} | cut -f1 -d'.'"
 
-	docker ps --format={{.Names}} 
+	docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Command}}\t{{.Ports}}"
 }
 
 name() {
@@ -25,6 +25,18 @@ name() {
 }
 
 tail_all(){
-	tail -f /Data/thetaray/*/*/logs/*.log -f /Data/thetaray/*/*/*/*.log
+	#tail -f /Data/thetaray/*/*/logs/*.log -f /Data/thetaray/*/*/*/*.log
+	tail -f /Data/thetaray/dc/dcbackend/logs/dcbackend.log \
+	-f /Data/thetaray/dc/chainmanager/logs/chain-manager.log 
+	-f /Data/thetaray/data-loader/logs/data-loader.log  \
+	-f /Data/thetaray/data-statistics/logs.data-statistics.log \
+	-f /Data/thetaray/flow-manager/logs/flow-manager.log \
+	-f /Data/thetaray/spark-job-manager/logs/spark-driver.log
+
 }
 
+tail_l(){
+	logPath=/Data/thetaray/*/*/logs/*.log | grep chain
+
+	tail -f $logPath
+}
