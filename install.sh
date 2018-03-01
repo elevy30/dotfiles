@@ -54,7 +54,7 @@ setup_gitconfig () {
 
 link_main_folder () {
 	echo "link $DOTFILES_ROOT to $DOTFILES_LN"
-	#ln -s "$DOTFILES_ROOT" "$DOTFILES_LN"
+	ln -s "$DOTFILES_ROOT" "$DOTFILES_LN"
 }
 
 

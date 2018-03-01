@@ -523,3 +523,8 @@ sudo sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
 vmware-view %u
 sudo apt install libpng16-16 
 vmware-view %u
+./install.sh 
+link /home/elevy/dotfiles/ to /home/elevy/.dotfiles
+link /home/elevy/dotfiles/ t /home/elevy/.dotfiles
+link /home/elevy/dotfiles/  /home/elevy/.dotfiles
+./install.sh 
