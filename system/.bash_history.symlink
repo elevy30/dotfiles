@@ -523,6 +523,7 @@ sudo sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
 vmware-view %u
 sudo apt install libpng16-16 
 vmware-view %u
+<<<<<<< HEAD
 * * * ? * * copyFileFromArchive.sh >> /tmp/trigger_batch.log
 * * * ? * * ./copyFileFromArchive.sh >> /tmp/trigger_batch.log
 * * * ? * * ./copyFileFromArchive.sh 
@@ -560,3 +561,10 @@ cd tr-common/
 mvn clean install
 git pull
 mvn clean install
+=======
+./install.sh 
+link /home/elevy/dotfiles/ to /home/elevy/.dotfiles
+link /home/elevy/dotfiles/ t /home/elevy/.dotfiles
+link /home/elevy/dotfiles/  /home/elevy/.dotfiles
+./install.sh 
+>>>>>>> 6f5cc57d6f178164f47596464108f0756264f889
