@@ -523,3 +523,40 @@ sudo sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
 vmware-view %u
 sudo apt install libpng16-16 
 vmware-view %u
+* * * ? * * copyFileFromArchive.sh >> /tmp/trigger_batch.log
+* * * ? * * ./copyFileFromArchive.sh >> /tmp/trigger_batch.log
+* * * ? * * ./copyFileFromArchive.sh 
+* * * ? * * copyFileFromArchive.sh 
+* * * ? * * echo hello
+* * *  * * echo hello
+1 * * * * echo hello
+crontab 1 * * * * echo hello
+crontab --help
+cron --help
+cron -help
+cron -h
+cron ?
+man cron 
+crontab --help
+crontab -e
+crontab -l
+crontab -e
+crontab -l
+crontab 
+service crond restart
+service cron status
+service cron restart
+crontab -l
+crontab -e
+service cron restart
+./copyFileFromArchive.sh 
+cd /opt/dev/git/detection-center/dc-backend/
+mvn dependency:tree
+mvn clean install
+git pull
+mvn clean install
+cd ..
+cd tr-common/
+mvn clean install
+git pull
+mvn clean install
