@@ -90,6 +90,3 @@ source ~/.alias
 source ~/.path_update
 source ~/tr_bash.sh
 source ~/tr_myssh.sh
-
-
-ssh-add ~/.ssh/tr-key.pem
