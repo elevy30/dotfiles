@@ -568,3 +568,21 @@ link /home/elevy/dotfiles/ t /home/elevy/.dotfiles
 link /home/elevy/dotfiles/  /home/elevy/.dotfiles
 ./install.sh 
 >>>>>>> 6f5cc57d6f178164f47596464108f0756264f889
+chmod 777 -R /opt
+sudo chmod 777 -R /opt
+cd ~
+ls
+cd dotfiles/
+chmod 777 install.sh 
+./install.sh 
+zsh
+sudo apt install zsh
+zsh
+zsh
+cd ~/dotfiles/
+./install.sh 
+cd ..
+rm .dotfiles
+cd dotfiles/
+./install.sh 
+zsh

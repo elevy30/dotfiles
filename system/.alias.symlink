@@ -5,7 +5,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export CQLSH_NO_BUNDLED=true
 
 #ssh key for working with thetaray machine 
-echo "THIS TERMINAL DOES NOT ADD THE THETARAY KEY TO THE SSH ssh-add ~/.ssh/tr-key.pem was commented out "
+#echo "THIS TERMINAL DOES NOT ADD THE THETARAY KEY TO THE SSH ssh-add ~/.ssh/tr-key.pem was commented out "
 #ssh-add ~/.ssh/tr-key.pem
 
 export ZSH="~/.oh-my-zsh"

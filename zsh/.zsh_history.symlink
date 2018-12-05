@@ -482,3 +482,9 @@
 : 1488295139:0;mvn clean install
 : 1488295525:0;cd ../tr-post-analysis-apps
 : 1488295533:0;mvn clean install
+: 1543846857:0;chmod 600 -R .ssh
+: 1543846877:0;cd ~
+: 1543846882:0;chmod 600 -R .ssh
+: 1543846887:0;sudochmod 600 -R .ssh
+: 1543846891:0;sudo chmod 600 -R .ssh
+: 1543847534:0;sudo ls
