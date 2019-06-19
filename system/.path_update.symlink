@@ -2,6 +2,12 @@
 # added by Anaconda3 4.2.0 installer
 export PATH="/opt/python/anaconda3/bin:$PATH"
 
-# hadoop
-export PATH="/opt/hadoop-2.7.3/sbin:$PATH"
-export PATH="/opt/hadoop-2.7.3/bin:$PATH"
+#java
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+
+# maven
+export M2_HOME=/usr/bin/mvn
+
+#export EDITOR='program'
+#export VISUAL='program'
+

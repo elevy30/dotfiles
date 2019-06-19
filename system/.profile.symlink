@@ -19,3 +19,7 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
+## Content of ~/scripts/wifi_toggle : ##
+str=`export LANGUAGE=en_GB ; nmcli r wifi`
+	[ "$str" == "enabled" ] && nmcli r wifi off
+    [ "$str" == "disabled" ] && nmcli r wifi on

@@ -70,7 +70,7 @@ checkout_all() {
    git checkout $1
    git pull
    
-   cd "/opt/dev/git/tr-post-analysis-apps"
+   cd "/opt/dev/git/tr-data-query"
    git checkout $1
    git pull
 
@@ -85,6 +85,10 @@ checkout_all() {
    cd "/opt/dev/git/tr-spark-ml"
    git checkout $1
    git pull
+
+   cd "/opt/dev/git/tr-data-query"
+   git checkout $1
+   git pull
    
 }
 
@@ -95,8 +99,8 @@ install_all() {
    cd "/opt/dev/git/tr-deployment"
    mvn clean install -U
    
-#   cd "/opt/dev/git/tr-post-analysis-apps"
-#   mvn clean install -U
+   cd "/opt/dev/git/tr-data-query"
+   mvn clean install -U
 
    cd "/opt/dev/git/detection-center"
    mvn clean install -U -P all
@@ -119,7 +123,7 @@ merge_master() {
    git pull
    git pull origin master
    
-   cd "/opt/dev/git/tr-post-analysis-apps"
+   cd "/opt/dev/git/tr-data-query"
    git pull
    git pull origin master
 
@@ -132,6 +136,10 @@ merge_master() {
    git pull origin master
 
    cd "/opt/dev/git/tr-spark-ml"
+   git pull
+   git pull origin master
+
+   cd "/opt/dev/git/tr-data-query"
    git pull
    git pull origin master
    
@@ -147,7 +155,7 @@ push_all() {
    git pull
    git push
    
-   cd "/opt/dev/git/tr-post-analysis-apps"
+   cd "/opt/dev/git/tr-data-query"
    git pull
    git push
 
