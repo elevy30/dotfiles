@@ -601,3 +601,5 @@ ifconfig /all
 ifconfig \all
 ifconfig a
 ifconfig -a
+root ./VMware-Horizon-Client-5.1.0-13956721.x64.bundle 
+zsh
