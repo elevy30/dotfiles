@@ -132,6 +132,9 @@ fi
 source ~/.alias
 source ~/.path_update
 export JDK11_HOME=/usr/lib/jvm/jdk-11.0.5 
+
+PATH=~/.kubectx:\$PATH
+
 export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/tr-rnd-maven.json
 
 

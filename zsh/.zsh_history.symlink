@@ -488,3 +488,212 @@
 : 1543846887:0;sudochmod 600 -R .ssh
 : 1543846891:0;sudo chmod 600 -R .ssh
 : 1543847534:0;sudo ls
+: 1580738756:0;git status 
+: 1580738768:0;git diff 
+: 1580738918:0;myssh 0.125
+: 1580738930:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.125"
+: 1580738932:0;myssh 0.125
+: 1580739757:0;ls
+: 1580739777:0;pwd
+: 1580739791:0;ls -la
+: 1580739805:0;cd .dropbox
+: 1580739806:0;ls
+: 1580739820:0;cd instance
+: 1580739822:0;cd instance1
+: 1580739823:0;ls
+: 1580739829:0;cat config.dbx
+: 1580739834:0;ls
+: 1580739875:0;find . -name "appdata"
+: 1580739879:0;find / -name "appdata"
+: 1580739886:0;sudo find / -name "appdata"
+: 1580809972:0;mvn clean install
+: 1580811087:0;mvn clean install _X
+: 1580811092:0;mvn clean install -X
+: 1580816503:0;cd bin
+: 1580816562:0;cd ..
+: 1580816573:0;java -jar bin/crawler-1.0-SNAPSHOT.jar "http://www.mit.edu" 2
+: 1580816831:0;mvn clean install 
+: 1580816976:0;mvn clean install shade
+: 1580816980:0;mvn clean install 
+: 1580817013:0;java -jar bin/crawler.jar "http://www.mit.edu" 2
+: 1580817041:0;ls
+: 1580817053:0;java -jar bin/crawler.jar "http://www.mit.edu" 2
+: 1580817147:0;cd bin
+: 1580817176:0;./run.sh
+: 1580817187:0;chmod 777 *
+: 1580817189:0;./run.sh
+: 1580903239:0;cat /etc/group
+: 1580903257:0;sudo cat /etc/shadow
+: 1580903287:0;cat /etc/passswd 
+: 1580903293:0;cat /etc/passwd 
+: 1580903391:0;reboot 
+: 1581250275:0;myssh 1.89
+: 1581348883:0;cd /opt/Dropbox/tr-backend/
+: 1581348895:0;git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | awk '$1 == "eyal" {print $2}'
+: 1581348899:0;git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | awk '$1 == "Eyal" {print $2}'
+: 1581350839:0;ping tr-5-ilyag-es-perf-manager.thetaraydev.com/
+: 1581350852:0;ping tr-5-ilyag-es-perf-manager.thetaraydev.com
+: 1581350860:0;myssh 1.178
+: 1581368197:0;myssh 0.160
+: 1581435206:0;myssh 0.107
+: 1581435292:0;myssh 1.107
+: 1581504694:0;ping tr-5-natalyaa-rnd-manager.thetaraydev.com
+: 1581504705:0;myssh 0.189
+: 1581504712:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.189"
+: 1581504714:0;myssh 0.189
+: 1581511784:0;ping tr-5-natalyaa-idan-manager.thetaraydev.com
+: 1581511797:0;myssh 0.228
+: 1581511806:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.228"
+: 1581511807:0;myssh 0.228
+: 1581542574:0;./idea.sh &
+: 1581584959:0;pwd
+: 1581584976:0;cd /home/eyal.levy/Desktop/Dropbox/devtool/ideaIU-2019.3.3\
+
+: 1581584983:0;cd bin
+: 1581584988:0;./idea.sh &
+: 1581588129:0;ping https://tr-5-natalyaa-idan-manager.thetaraydev.com/
+: 1581588135:0;ping tr-5-natalyaa-idan-manager.thetaraydev.com/
+: 1581588139:0;ping tr-5-natalyaa-idan-manager.thetaraydev.com
+: 1581588147:0;myssh 0.228
+: 1581588184:0;myssh 0.226
+: 1582042126:0;cd /opt/Dropbox/tr-backend/
+: 1582042704:0;env
+: 1582116524:0;ping tr-5-rivkia-export-manager.thetaraydev.com
+: 1582116539:0;myssh 1.15
+: 1582116547:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.1.15"
+: 1582116548:0;myssh 1.15
+: 1582125424:0;myssh 0.225
+: 1582125430:0;myssh 0.255
+: 1582129158:0;cd /opt/Dropbox/tr-backend/
+: 1582129161:0;git status 
+: 1582534399:0;myssh 1.173
+: 1582632949:0;git checkout talos-fixes
+: 1582632980:0;cleasr
+: 1582632982:0;clear
+: 1582632984:0;git pull 
+: 1582706593:0;myssh 0.203
+: 1582710477:0;git commite -am "increase gatekeeper timeout "
+: 1582710485:0;git commit -am "increase gatekeeper timeout "
+: 1582710491:0;git push origin master
+: 1582710513:0;git pull
+: 1582710524:0;git push origin master
+: 1582711322:0;myssh 0.203
+: 1582715230:0;cd /opt/Dropbox/tr-backend/
+: 1582715235:0;cd ..
+: 1582715239:0;git clone git@bitbucket.org:thetaray/tr-backend.git
+: 1582715362:0;git status 
+: 1582715727:0;myssh 0.203
+: 1582722246:0;nmcli con show 
+: 1582722274:0;nmcli dev show 
+: 1582722285:0;ip addr 
+: 1582722305:0;ifconfig 
+: 1582722346:0;systemctl stop network
+: 1582722358:0;sudo systemctl stop network
+: 1582722397:0;sudo systemctl stop networking.service
+: 1582722405:0;sudo systemctl start networking.service
+: 1582722416:0;sudo systemctl status networking.service
+: 1582722432:0;ping 8.8.8.8
+: 1582722441:0;sudo systemctl status networking.service
+: 1582722446:0;nmcli con show 
+: 1582722668:0;ifconfig 
+: 1582722785:0;sudo systemctl stop networking.service
+: 1582722792:0;ifconfig 
+: 1582722815:0;sudo systemctl start networking.service
+: 1582722853:0;sudo systemctl status networking.service
+: 1582722964:0;ping 8.8.8.8
+: 1582722999:0;service network stop
+: 1582723005:0;sudo service network stop
+: 1582723012:0;sudo service networking stop
+: 1582723022:0;sudo systemctl status networking.service
+: 1582723044:0;service network start
+: 1582723051:0;sudo service network start
+: 1582723057:0;sudo service networking start
+: 1582723182:0;nmcli connection add
+: 1582723601:0;ifconfig -a
+: 1582723635:0;ifconfig cni0 down
+: 1582723639:0;sudo ifconfig cni0 down
+: 1582723651:0;sudo ifconfig cni0 up
+: 1582723655:0;ifconfig -a|more
+: 1582723711:0;nmcli con show
+: 1582723731:0;sudo ifconfig br-02bdca7fab14 down
+: 1582723734:0;nmcli con show
+: 1582723739:0;sudo ifconfig br-02bdca7fab14 up
+: 1582723740:0;nmcli con show
+: 1582723744:0;ifconfig -a|more
+: 1582723769:0;sudo ifconfig br-02bdca7fab14 down
+: 1582723773:0;sudo ifconfig cni0 down
+: 1582723776:0;nmcli con show
+: 1582723784:0;ifconfig -a|more
+: 1582723805:0;sudo ifconfig cni0 unplumb
+: 1582723843:0;locate network
+: 1582723852:0;locate network|more
+: 1582723868:0;cd /etc/init.d
+: 1582723868:0;ls
+: 1582723887:0;sudo ifconfig br-02bdca7fab14 up
+: 1582723892:0;sudo ifconfig cni0 up
+: 1582828427:0;myssh 0.161
+: 1582828442:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.161"
+: 1582828444:0;myssh 0.161
+: 1582828630:0;myssh 0.157
+: 1582829006:0;myssh 0.161
+: 1583057198:0;myssh 0.203
+: 1583221698:0;myssh 1.113
+: 1583221704:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.1.113"
+: 1583221706:0;myssh 1.113
+: 1583244364:0;cd /opt/Dropbox/tr-backend/
+: 1583244366:0;cd ..
+: 1583244376:0;git clone https://github.com/keycloak/keycloak-gatekeeper.git
+: 1583246891:0;myssh 1.113
+: 1583409554:0;ifconfig -a|more
+: 1583409644:0;ip a
+: 1583410345:0;netstat -rn
+: 1583410523:0;ip a|more
+: 1583410803:0;netstat -rn
+: 1583410837:0;ip a|more
+: 1583410907:0;cat /etc/hosts
+: 1583410934:0;cd /etc/network
+: 1583410935:0;ls
+: 1583410941:0;cd interfaces.d
+: 1583410942:0;ls
+: 1583410944:0;ls -la
+: 1583410948:0;cd .
+: 1583410950:0;cd ..
+: 1583410952:0;cat interfaces
+: 1583411356:0;cat /etc/network/interfaces
+: 1583411379:0;lshw -C network
+: 1583411522:0;lshw -C network|grep enx
+: 1583411531:0;sudo lshw -C network|grep enx
+: 1583411652:0;lshw -C network|more
+: 1583411681:0;sudo lshw -C network|more
+: 1583412023:0;cat /etc/network/interfaces
+: 1583412185:0;sudo lshw -C network
+: 1583412201:0;nm-tool
+: 1583412222:0;cat /etc/NetworkManager/NetworkManager.conf
+: 1583412354:0;cat /var/lib/NetworkManager/NetworkManager.state
+: 1583412385:0;cat /var/lib/NetworkManager/NetworkManager-intern.conf
+: 1583412547:0;cat /etc/network/interfaces
+: 1583412837:0;ifocnfig -a
+: 1583412839:0;cd
+: 1583412841:0;ifconfig -a
+: 1583412948:0;lspci
+: 1583413078:0;lsetc/init.d
+: 1583413083:0;ls /etc/init.d
+: 1583413165:0;modprobe
+: 1583413172:0;modprobe -h
+: 1583414240:0;man NetworkManager
+: 1583414305:0;sudo  NetworkManager pre-up
+: 1583414318:0;man NetworkManager
+: 1583414341:0;man NetworkManager `\
+sudo  NetworkManager pre-upq\
+:q
+: 1583414346:0;sudo  NetworkManager up
+: 1583414357:0;man NetworkManager \
+sudo  NetworkManager pre-upq\
+:q
+: 1583422766:0;dpkg --configure -a 
+: 1583422773:0;sudo dpkg --configure -a 
+: 1583423349:0;sudo add-apt-repository universe
+: 1583423372:0;sudo apt install gnome-tweak-tool
+: 1583423385:0;gnomr-tweak
+: 1583423391:0;gnome-tweak
+: 1583424241:0;sudo gnome-tweak
