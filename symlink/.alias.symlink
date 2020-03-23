@@ -1,0 +1,45 @@
+
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+#Cassandra
+export CQLSH_NO_BUNDLED=true
+
+#ssh key for working with thetaray machine 
+#echo "THIS TERMINAL DOES NOT ADD THE THETARAY KEY TO THE SSH ssh-add ~/.ssh/tr-key.pem was commented out "
+#ssh-add ~/.ssh/tr-key.pem
+
+export ZSH="~/.oh-my-zsh"
+#sudo chsh -s /usr/bin/zsh eyallevy
+#sudo chsh -s /bin/bash eyallevy
+
+#Git  
+alias gst="cd /opt/dev/git;find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;"
+
+#Maven  
+alias mvdc="cd /opt/dev/git/detection-center;mvn clean install -P all"
+alias mvsp="cd /opt/dev/git/tr-spark-ml;mvn clean install"
+alias mvpo="cd /opt/dev/git/tr-post-analysis-apps;mvn clean install"
+
+#SPARK
+alias tail_spark="tail -f /opt/spark-2.2.0/logs/*.out /opt/spark-2.2.0/logs/spark-driver.log"
+#export SPARK_WORKER_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4001,suspend=n"
+#export SPARK_MASTER_OPTS="-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4002,suspend=n"
+
+alias update_jar="cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-splitter-job/target/uber-tr-splitter-job-3.2.0-SNAPSHOT.jar /opt/tr/lib/tr-splitter-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-upload-job/target/uber-tr-upload-job-3.2.0-SNAPSHOT.jar /opt/tr/lib/tr-upload-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-build-job/target/uber-tr-build-job-3.2.0-SNAPSHOT.jar /opt/tr/lib/tr-build-job.jar; \
+				  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-integrity-job/target/uber-tr-integrity-job-3.2.0-SNAPSHOT.jar /opt/tr/lib/tr-integrity-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-traceback-context-job/target/uber-tr-traceback-context-job-3.2.0-SNAPSHOT.jar /opt/tr/lib/tr-traceback-context-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/tr-profile-job/target/uber-tr-profile-job-3.2.0-SNAPSHOT.jar /opt/tr/lib/tr-profile-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/spark/tr-jobs/spark-wrapper-job/target/uber-spark-wrapper-job-3.2.0-SNAPSHOT.jar /opt/tr/lib/spark-wrapper-job.jar; \
+                  cp /opt/dev/git/tr-spark-ml/webapps/tr-data-loader/target/data-loader.jar /opt/tr/lib/data-loader.jar; \
+                  cp /opt/dev/git/tr-spark-ml/webapps/spark-job-manager/target/spark-job-manager.jar /opt/tr/lib/spark-job-manager.jar;"
+
+if [ -f ~/tr_bash.sh ]; then
+    source ~/
+else
+    print "404: ~/tr_bash.sh not found."
+fi
+
+
+alias dockerps="docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Command}}\t{{.Ports}}'"

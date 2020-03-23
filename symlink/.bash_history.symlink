@@ -1,0 +1,630 @@
+docker start tr-zeppelin
+cqlsh
+sudo mv /opt/git/cassandra-scala/QR_500K.zip /Data/thetaray/zeppelin/data/
+sudo rm -rf  /Data/thetaray/zeppelin/data/QR_500K.zip 
+sudo cp /opt/git/cassandra-scala/QR_500K.csv /Data/thetaray/zeppelin/data/
+sudo apt-get install htop
+htop
+chrome
+/opt/google/chrome/google-chrome --enable-plugins
+google-chrome
+google-chrome https://mail.google.com/mail/ca/u/0/#inbox
+google-chrome https://mail.google.com/mail/ca/u/0/#inbox https://calendar.google.com/calendar/render#main_7
+idea
+cqlsh
+htop
+useradd activemq
+sudo useradd activemq
+mkdir /home/activemq
+sudo mkdir /home/activemq
+sudo chown activemq.activemq /home/activemq
+wget http://apache.cs.uu.nl/activemq/5.11.1/apache-activemq-5.11.1-bin.tar.gz
+wget http://activemq.apache.org/path/tofile/apache-activemq-5.11.1-bin.tar.gz
+sudo chown activemq.activemq /opt/activemq
+ln -s /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64/activemq /etc/init.d/activemq
+sudo ln -s /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64/activemq /etc/init.d/activemq
+sudo gedit /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64/activemq
+lst /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64
+ls /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64
+ll /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64
+sudo chown -R activemq.activemq /opt/activemq
+ll /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64
+sudo gedit /opt/activemq/apache-activemq-5.13.0/bin/linux-x86-64/wrapper.conf 
+sudo service activemq start
+cd /opt/activemq/apache-activemq-5.13.0/
+bin/activemq start
+su - activemq
+sudo chown -R eyallevy:eyallevy /opt/activemq
+bin/activemq start
+jps
+ssh 172.16.1.108
+ssh ubuntu@172.16.1.108
+ping 172.16.1.108
+sudo vim ~/.bashrc
+ssh-add eyallevy.pem 
+ssh ubuntu@172.16.1.108
+ssh-add ~/.ssh/tr-key.pem 
+chmod 600 ~/.ssh/tr-key.pem 
+ssh-add ~/.ssh/tr-key.pem 
+ssh ubuntu@172.16.1.108
+ssh ubuntu@172.16.1.186
+sudo vim ~/.bashrc
+ssh-add ~/.ssh/tr-key.pem
+ssh ubuntu@172.16.1.186
+ssh ubuntu@172.16.1.108
+ping http://172.16.1.186/
+ping 172.16.1.186
+ssh ec2-user@172.16.1.108
+ssh ec2-usr@172.16.1.108
+ssh EC2-user@172.16.1.108
+ssh ec2-user@172.16.1.186
+sudo apt-get install byzanz
+byzanz-record-window 
+byzanz
+whereis byzanz
+byzanz-record
+byzanz-record -d 10 --delay=5 -x 0 -y 0 -w 1920 -h 1080 bug.gif
+ll
+cd /opt/
+mkdir bugs
+cd bugs/
+mv ~/bug.gif .
+byzanz-record -d 5 --delay=5 -x 0 -y 0 -w 1920 -h 1080 bug.gif
+byzanz-record -d 5 --delay=5 -x 1920 -y 0 -w 1920 -h 1080 bug.gif
+byzanz-record -d 5 --delay=3 -x 1920 -y 0 -w 1920 -h 1080 bug.gif
+byzanz-record -d 10 --delay=3 -x 1920 -y 0 -w 1920 -h 1080 bug.gif
+byzanz-record -d 20 --delay=3 -x 1920 -y 0 -w 1920 -h 1080 bug.gif
+byzanz-record -d 10 --delay=3 -x 1920 -y 0 -w 1920 -h 1080 bug.gif
+exit
+scp 
+scp /opt/datasample/API_8_DS2_en_csv_v2.csv ec2-user@172.16.1.186\Data
+ll ec2-user@172.16.1.186\Data
+ll
+rm -rf ec2-user@172.16.1.186Data 
+pwd
+scp -P 2222 /opt/datasample/API_8_DS2_en_csv_v2.csv ec2-user@172.16.1.186:/Data
+scp /opt/datasample/API_8_DS2_en_csv_v2.csv ec2-user@172.16.1.186:/Data
+sudo scp /opt/datasample/API_8_DS2_en_csv_v2.csv ec2-user@172.16.1.186:/Data
+sudo scp /opt/datasample/API_8_DS2_en_csv_v2.csv ec2-user@172.16.1.186:/home/ec2-user/
+sudo scp /opt/datasample/API_8_DS2_en_csv_v2.csv ec2-user@172.16.1.186:/home/ec2-user/theta
+scp /opt/datasample/API_8_DS2_en_csv_v2.csv ec2-user@172.16.1.186:/home/ec2-user/theta
+ssh ec2-user@172.16.1.186
+sudo . Anaconda3-4.2.0-Linux-x86_64.sh
+ll
+ls *.sh
+ls -l *.sh
+chmod +x Anaconda3-4.2.0-Linux-x86_64.sh 
+ll
+./Anaconda3-4.2.0-Linux-x86_64.sh 
+ll
+which python
+python
+python
+head -10 part-0000
+head -10 part-00000
+head -1 part-00000
+more part-00000
+more output_file.csv 
+. pycharm.sh
+sudo apt-get install zsh
+zsh
+docker
+docker images
+docker run -d -p 5432:5432 --name tr-psql docker-registry.thetaray-aws.com:5000/thetaray/tr-postgres:LATEST
+docker run -d -p 5432:5432 --name tr-psql docker-registry.thetaray-aws.com:5000/thetaray/tr-postgres
+sudo vi /lib/systemd/system/docker.service
+sudo  systemctl daemon-reload
+sudo service docker restart
+ps -ef | grep docker
+docker run -d -p 5432:5432 --name tr-psql docker-registry.thetaray-aws.com:5000/thetaray/tr-postgres
+docker run -d -p 5432:5432 --name tr-psql docker-registry.thetaray-aws.com:5000/thetaray/tr-postgres:2.1.2-SNAPSHOT.1583
+docker images
+docker ps
+start tr-dc-mq
+docker start tr-dc-mq
+docker ps
+sudo gedit /etc/hosts
+git status
+git reset HEAD
+git clean -Df
+git clean -df
+git checkout .
+git pull origin master
+docker ps
+sudo gedit /etc/hosts
+ll /home/eyalevy
+ll /home/eyallevy
+head -10 proxy.csv 
+sudo gedit /etc/hosts
+curl localhost:9400/dataloader/suggestSchema/51
+git status
+mvn clean install
+cd ../tr-spark-ml/
+mvn clean install
+git status
+git pull origin master
+mvn clean install -T 1C -P all
+git pull
+git status
+git checkout -- .
+git status
+gut pull
+git pull
+mvn clean install -T 1C -P all
+vim ~/.bashrc
+sudo /etc/hosts
+sudo /etc/host
+sudo vim /etc/hosts
+start start tr-psql
+docker start tr-psql
+docker start tr-dc-mq
+git pull
+git log
+sudo sublime ~/.bashrc
+sublime ~/.bashrc
+sublimetext
+sublime_text
+vim  ~/.bashrc
+docker images
+docker start ca891b936f9d 96c35bce890b
+docker container
+docker --help
+docker ps
+docker ps -a -q -f status=exited
+docker ps  -f status=exited
+docker rm -v 7308842f3a23
+docker rm -v 81cfaafeacca
+docker ps  -f status=exited
+docker images -f "dangling=true" -q
+docker images 
+docker rmi c54a2cc56cbb 53c8774da33b
+docker images 
+docker ps
+docker container
+docker ps -a -q -f status=exited
+docker ps -a -q 
+docker ps -a 
+docker start tr-psql
+docker start tr-dc-mq
+docker start tr-psql
+docker start tr-dc-mq
+ifconfig
+whoami
+which
+docker start tr-psql
+docker start tr-dc-mq
+sudo lshw -C display
+>cat /proc/cpuinfo
+sudo cat /proc/cpuinfo
+cat /etc/systemd/logind.conf
+sudo vim /etc/group
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hduser
+su - hduser\
+su - hduser
+su - hduser
+sudo chown -R hduser:hadoop /opt/hadoop-2.7.3/
+su -hduser
+su - hduser
+zsh
+sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get install krb5-kdc krb5-admin-server
+sudo krb5_newrealm
+sudo gedit /etc/krb5kdc/kdc.conf
+sudo kadmin.local
+service krb5kdc start
+sudo service krb5kdc start
+sudo service kadmin start
+kdb5_util create -r elevy -s
+sudo service krb5kdc start
+sudo ll /var/lib/krb5kdc/
+sudo ls /var/lib/krb5kdc/
+sudo cat /var/lib/krb5kdc/principal
+sudo ls /var/lib/krb5kdc/
+sudo cat /var/lib/krb5kdc/principal.ok
+sudo service krb5kdc start
+sudo ls -l /usr/lib/systemd/system/
+sudo ls -l /usr/lib/systemd/system
+sudo ls -l /usr/lib/systemd/
+clear
+sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get install krb5-kdc krb5-admin-server
+sudo krb5_newrealm
+sudo sublime /etc/krb5kdc/kdc.conf
+subl
+sudo subl /etc/krb5kdc/kdc.conf
+kdb5_util create -r EXAMPLE.COM -s
+kdb5_util create -r elevy -s
+sudo gedit /etc/krb5kdc/kadm5.acl
+sudo subl /etc/krb5kdc/kadm5.acl
+sudo kadmin.local
+sudo dpkg-reconfigure krb5-kdc.
+sudo dpkg-reconfigure krb5-kdc
+sudo subl /etc/krb5.conf
+service krb5kdc start
+service krb5kdc status
+cd /var/log; sudo tail -F daemon.log sulog user.log auth.log debug kern.log syslog dmesg messages kerberos/{krb5kdc,kadmin,krb5lib}.log
+sudo invoke-rc.d krb5-admin-server restart
+sudo invoke-rc.d krb5-kdc restart
+sudo service krb5-admin-server status
+klist -f
+sudo subl /etc/krb5.conf
+sudo subl /etc/ssh/sshd_config
+sudo subl /opt/hadoop-2.7.3/etc/hadoop/core-site.xml
+apt install zsh
+apt-get install zsh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+chsh -s `which zsh`
+zsh
+ls -la 
+zsh
+su - hduser
+echo $SHELL
+env | grep ^SHELL=
+set SHELL=/bin/bash
+su - hduser
+kadmin -p elevy/admin@elevy
+sudo apt-get purge krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get purge krb5-kdc krb5-admin-server
+sudo apt-get purge krb5-clients
+sudo apt autoremove
+nmcli device show eth0 | grep IP4.DNS
+nmcli device show lo | grep IP4.DNS
+nm-tool
+cat /etc/resolv.conf
+sudo klist -e -k -t /etc/krb5kdc/kadm5.keytab
+sudo klist -e -k -t /opt/admin.keytab
+ktutil
+klist -e -k -t /opt/admin.keytab
+klist
+ls /opt/admin.keytab 
+ll /opt/admin.keytab 
+chmod 777 /opt/admin.keytab
+ll /opt/admin.keytab 
+mkdir /opt/help/kerberos_backup
+. /opt/help/backup.working.setup 
+ifconfig
+ifconfig -a
+host
+$host
+$hostname
+echo $hostname
+clear
+sudo apt install krb5-kdc krb5-admin-server
+sudo krb5_newrealm
+sudo apt-get purge krb5-kdc krb5-admin-server
+apt-get purge krb5-config krb5-locales krb5-user
+sudo apt-get purge krb5-config krb5-locales krb5-user
+dpkg --get-selections | grep -v deinstall | grep krb
+sudo apt-get purge krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt autoremove
+sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get purge krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get purge krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get purge krb5-config krb5-locales krb5-user
+sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get install krb5-kdc krb5-admin-server
+sudo krb5_newrealm
+sudo rm -rf /var/lib/krb5kdc/principal
+sudo krb5_newrealm
+ll /var/lib/krb5kdc/principal
+sudo ll /var/lib/krb5kdc/principal
+sudo ls /var/lib/krb5kdc/principal
+sudo ls -al/var/lib/krb5kdc/principal
+sudo ls -al /var/lib/krb5kdc/principal
+sudo rm -rf /var/lib/krb5kdc/principal
+sudo ls -al /var/lib/krb5kdc
+sudo rm -R /var/lib/krb5kdc
+sudo ls -al /var/lib/krb5kdc
+sudo krb5_newrealm
+sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get install krb5-kdc krb5-admin-server
+sudo krb5_newrealm
+sudo mkdir /var/lib/krb5kdc/
+sudo krb5_newrealm
+sudo dpkg-reconfigure krb5-kdc
+sudo gedit /etc/krb5kdc/kdc.conf
+kdb5_util create -r ThetaRayLTD.local -s
+sudo kdb5_util create -r ThetaRayLTD.local -s
+sudo subl /etc/krb5kdc/kadm5.acl
+sudo kadmin.local
+sudo subl /etc/krb5kdc/kadm5.acl
+sudo service krb5-admin-server restart
+sudo service krb5-kdc restart
+kinit elevy/admin
+sudo dpkg-reconfigure krb5-kdc
+kinit elevy/admin
+sudo subl /etc/krb5.conf
+sudo subl /etc/krb.realms
+klist -e -k -t /etc/krb5kdc/kadm5.keytab
+sudo klist -e -k -t /etc/krb5kdc/kadm5.keytab
+sudo ls /etc/krb5kdc/
+kinit elevy/admin
+kinit elevy/admin@ThetaRayLTD.local
+klist
+sudo klist
+sudo dpkg-reconfigure krb5-kdc
+sudo service krb5-admin-server restart
+sudo service krb5-kdc restart
+kinit elevy/admin@ThetaRayLTD.local
+sudo dpkg-reconfigure krb5-kdc
+sudo service krb5-admin-server restart
+sudo service krb5-kdc restart
+kinit elevy/admin@ThetaRayLTD.local
+sudo service krb5-admin-server status
+sudo service krb5-kdc status
+sudo ls /etc/krb5kdc
+sudo ls /etc/krb5kdc/kdc.conf
+sudo gedit /etc/krb5kdc/kdc.conf
+kadmin -p elevy/admin@ThetaRayLTD.local
+kadmin -p elevy/admin@elevy
+sudo dpkg-reconfigure krb5-kdc
+sudo service krb5-admin-server restart
+sudo service krb5-kdc restart
+kinit elevy/admin@ThetaRayLTD.local
+sudo kadmin.local
+kinit elevy/admin@ThetaRayLTD.local
+sudo apt-get install krb5-kdc
+sudo apt-get install krb5-clients
+kinit elevy/admin@ThetaRayLTD.local
+sudo apt-get purge krb5-kdc krb5-admin-server
+sudo apt-get purge krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo rm -rf  /etc/krb5.conf 
+vim /var/lib/krb5kdc/
+sudo rm -R /var/lib/krb5kdc
+vim /var/lib/krb5kdc/
+sudo apt-get purge krb5-config krb5-locales
+dpkg --get-selections | grep -v deinstall | grep krb
+ls /etc/krb5kdc/
+sudo ls /etc/krb5kdc/
+sudo ls /etc/krb5kdc
+sudo ls /etc
+cd /
+find . -name "*krb5*"
+sudo find . -name "*krb5*"
+sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config
+sudo apt-get install krb5-kdc krb5-admin-server
+sudo krb5_newrealm
+sudo subl /etc/krb5kdc/kdc.conf 
+kdb5_util create -r thetaray.com -s
+sudo kdb5_util create -r thetaray.com -s
+sudo kadmin.local
+sudo service krb5-admin-server restart
+sudo service krb5-kdc restart
+sudo dpkg-reconfigure krb5-kdc
+sudo gedit /etc/krb5.conf
+kinit elevy/admin@thetaray.com
+kinit elevy/admin
+sudo kdb5_util create -r thetaray.com -s
+sudo kadmin.local
+kinit elevy/admin
+klist -e -k -t /etc/krb5kdc/kadm5.keytab
+sudo klist -e -k -t /etc/krb5kdc/kadm5.keytab
+kadmin -p elevy/admin@thetaray.com
+kutil
+ktutil
+klist -e -k -t /opt/admin.keytab
+su - hduser
+su - hduser
+kadmin
+sudo vim /etc/hosts
+ls /tmp
+rm -f /tmp/krb*
+sudo rm -f /tmp/krb*
+ktutil
+kinit -kt /opt/admin.keytab elevy/admin@thetaray.com 
+klist -e
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install oracle
+sudo apt install oracle-java8-unlimited-jce-policy
+sudo service cassandra status
+su - hduser
+ifconfig
+hostname -a
+hostname 
+hostname -d
+hostname -f
+sudo vim /etc/hosts
+. backup.working.setup 
+sudo vim /etc/hosts
+netstat | grep 9000
+netstat 
+sudo vim /etc/hosts
+git checkout MVP-3081
+git pull
+git checkout feature-MVP-3081 
+git pull
+git diff master
+clear
+git diff feature-MVP-3081..master
+clear
+mvn clean install
+
+mvn clean install
+git log 
+su - hduser
+git pull
+ls /opt
+ls /opt/Dropbox/
+ls /opt/Dropbox/idea/
+ls /opt/Dropbox/idea/bin
+sudo mv /opt/sublime_text /opt/Dropbox/
+ls /opt/
+ls /opt/D
+ls /opt/Dropbox/
+ls /tmp/
+ls -la /tmp/
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+sudo dpkg --configure -a.
+sudo dpkg --configure -a
+sudo apt-get remove sublime-text-installer
+sudo dpkg --configure -a
+sudo apt-get remove sublime-text-installer
+sblm
+subl
+sudo apt-get install sublime-text-installer
+ls /usr/share/applications/
+zsh
+cd ~/.zsh
+find zsh-autosuggestions
+whereis  zsh-autosuggestions
+echo $ZSH_CUSTOM
+${ZSH_CUSTOM}
+$ZSH
+sudo subl ~/.bashrc
+source ~/.bashrc
+$ZSH
+ls ~/.oh-my-zsh/
+ls -la ~/.oh-my-zsh/
+zsh
+which zsh
+zsh 
+vim /opt/Dropbox/help/backup.working.setup 
+which zsh
+which bash
+chsh
+${which zsh}
+$(which zsh)
+$(whoami)
+exit
+zsh
+cd /opt/Dropbox/tools/idea/
+cd bin 
+idea.sh
+./idea.sh
+exit
+exit
+start-dfs.sh
+gksudo bash ~/Downloads/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt install gksu
+gksudo bash ~/Downloads/VMware-Player-6.0.2-1744117.x86_64.bundle
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt-get install libcanberra-gtk*
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt-get install libcanberra-gtk3-module
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle
+sudo apt-get install libcanberra-gtk-module:i386
+gksudo bash /opt/Dropbox/tools/vmware/VMware-Player-6.0.2-1744117.x86_64.bundle 
+vmware
+which vmware
+where is vmware
+gcc -v
+sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+chmod 777 /var/lib/dpkg/lock
+sudo chmod 777 /var/lib/dpkg/lock
+sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+sudo chmod 777 /var/cache/apt/archives/lock
+sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+sudo sudo dpkg -i libpng12-0_1.2.50-2+deb8u2_amd64.deb; apt-get install -f
+vmware-view %u
+sudo apt install libpng16-16 
+vmware-view %u
+<<<<<<< HEAD
+* * * ? * * copyFileFromArchive.sh >> /tmp/trigger_batch.log
+* * * ? * * ./copyFileFromArchive.sh >> /tmp/trigger_batch.log
+* * * ? * * ./copyFileFromArchive.sh 
+* * * ? * * copyFileFromArchive.sh 
+* * * ? * * echo hello
+* * *  * * echo hello
+1 * * * * echo hello
+crontab 1 * * * * echo hello
+crontab --help
+cron --help
+cron -help
+cron -h
+cron ?
+man cron 
+crontab --help
+crontab -e
+crontab -l
+crontab -e
+crontab -l
+crontab 
+service crond restart
+service cron status
+service cron restart
+crontab -l
+crontab -e
+service cron restart
+./copyFileFromArchive.sh 
+cd /opt/dev/git/detection-center/dc-backend/
+mvn dependency:tree
+mvn clean install
+git pull
+mvn clean install
+cd ..
+cd tr-common/
+mvn clean install
+git pull
+mvn clean install
+=======
+./install.sh 
+link /home/elevy/dotfiles/ to /home/elevy/.dotfiles
+link /home/elevy/dotfiles/ t /home/elevy/.dotfiles
+link /home/elevy/dotfiles/  /home/elevy/.dotfiles
+./install.sh 
+>>>>>>> 6f5cc57d6f178164f47596464108f0756264f889
+chmod 777 -R /opt
+sudo chmod 777 -R /opt
+cd ~
+ls
+cd dotfiles/
+chmod 777 install.sh 
+./install.sh 
+zsh
+sudo apt install zsh
+zsh
+zsh
+cd ~/dotfiles/
+./install.sh 
+cd ..
+rm .dotfiles
+cd dotfiles/
+./install.sh 
+zsh
+cd
+sudo apt-get install network-manager-openvpn -y
+ifconfig
+sudo apt install net-tools
+ifconfig
+sudo apt install net-tools
+ifconfig
+sudo apt install net-tools
+ifconfig
+ifconfig -all
+ifconfig --all
+ifconfig /all
+ifconfig \all
+ifconfig a
+ifconfig -a
+root ./VMware-Horizon-Client-5.1.0-13956721.x64.bundle 
+zsh
+chmod 777 install.sh 
+./install.sh 
+chmod 777 -R liramzarrouk/
+sudo chmod 777 -R liramzarrouk/
+chsh zsh
+sudo chmod 777 -R /opt
+cd /opt/dev
+git clone https://github.com/elevy30/dotfiles.git
+touch run.sh
+cd /opt/dev
+ssh-add ~/.ssh/tr-key.pem 
+chmod 600 ~/.ssh/tr-key.pem 
+ssh-add ~/.ssh/tr-key.pem 
+git clone git@bitbucket.org:thetaray/tr-backend.git
+touch .k8s.symlink
+chsh -s $(which zsh)
+zsh
+chsh -s $(which zsh)
+zsh
+git commit -am "add new_laptop"
+git push 
+intellij
+idea.sh
+find idea.sh
+find . idea.sh

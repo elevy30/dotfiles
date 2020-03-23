@@ -1,0 +1,699 @@
+: 1485351164:0;cd /opt/git
+: 1485351168:0;cd detection-center
+: 1485351245:0;ls
+: 1485351289:0;ls -la 
+: 1485351294:0;exit
+: 1485351942:0;\cd /opt/git/detection-center
+: 1485351946:0;ls
+: 1485351950:0;ll
+: 1485416754:0;pwd
+: 1485416763:0;cd /opt/git
+: 1485416835:0;sudo subl /etc/krb5kdc/kadm5.acl~
+: 1485416848:0;sudo subl /etc/krb5kdc/kadm5.acl
+: 1485417542:0;start-dfs.sh
+: 1485417548:0;cd /
+: 1485417609:0;cd /opt/hadoop-2.7.3/etc/hadoop
+: 1485417610:0;ll
+: 1485417621:0;cd bin
+: 1485417625:0;cd ../..
+: 1485417629:0;cd sbin
+: 1485417630:0;ll
+: 1485417648:0;su - hduser
+: 1485418826:0;sudo service krb5-kdc status
+: 1485418844:0;sudo service krb5-admin-server status
+: 1485419585:0;cd /opt/hadoop-2.7.3/sbin
+: 1485419586:0;ll
+: 1485419595:0;cd ../bin
+: 1485419597:0;ll
+: 1485419623:0;. hadoop fs -mkdir /user/hduser/test/hello1.txt
+: 1485419633:0;.hadoop fs -mkdir /user/hduser/test/hello1.txt
+: 1485419642:0;. hadoop fs -mkdir /user/hduser/test/hello1.txt
+: 1485419659:0;. hdfs dfs -mkdir /user/hduser/test/hello1.txt
+: 1485421430:0;cd /
+: 1485421437:0;ktutil
+: 1485592096:0;su -hduser
+: 1485592102:0;su - hduser
+: 1485593737:0;klist
+: 1485593846:0;klist -e -k -t /opt/admin.keytab
+: 1485595622:0;exit
+: 1485595630:0;kinit -kt /opt/admin.keytab elevy/admin@elevy
+: 1485595674:0;/opt/hadoop-2.7.3/sbin/start-dfs.sh
+: 1485595978:0;chown hduser:hadoop /opt/admin.keytab
+: 1485596001:0;ll /opt/admin.keytab
+: 1485596022:0;chmod 777 /opt/admin.keytab
+: 1485596025:0;ll /opt/admin.keytab
+: 1485596194:0;ktutil
+: 1485596825:0;kadmin -p admin@elevy
+: 1485596835:0;kadmin -p elevy/admin@elevy
+: 1485597176:0;sudo dpkg-reconfigure krb5-kdc
+: 1485597836:0;sudo subl /etc/krb5kdc/kadm5.acl
+: 1485597937:0;sudo service krb5-admin-server restart
+: 1485597951:0;kadmin -p elevy/admin@elevy
+: 1485598560:0;sudo subl /etc/krb5kdc/kadm5.acl
+: 1485601183:0;sudo service krb5-admin-server restart
+: 1485601198:0;sudo service krb5-kdc restart
+: 1485601283:0;kadmin -p elevy/admin@elevy
+: 1485601519:0;sudo dpkg-reconfigure krb5-kdc
+: 1485601527:0;kadmin -p elevy/admin@elevy
+: 1485601682:0;sudo subl /etc/krb.conf
+: 1485601703:0;sudo gedit /etc/krb.conf
+: 1485601911:0;sudo dpkg-reconfigure krb5-kdc
+: 1485601935:0;sudo service krb5-admin-server krb5-kdc restart
+: 1485601942:0;sudo service krb5-admin-server restart
+: 1485601947:0;sudo service krb5-kdc restart
+: 1485601955:0;kadmin -p elevy/admin@elevy
+: 1485602341:0;klist -e -k -t /opt/admin.keytab
+: 1485602720:0;sudo dpkg-reconfigure krb5-kdc
+: 1485603392:0;kinit -kt /opt/admin.keytab elevy/admin@elevy
+: 1485603403:0;kinit -kt /opt/admin.keytab hdfs/loclahost@elevy
+: 1485603425:0;kinit -kt /opt/admin.keytab hdfs/localhost@elevy
+: 1485603461:0;sudo kadmin.local
+: 1485603967:0;kinit -kt /opt/admin.keytab hdfs/localhost
+: 1485605438:0;sudo service krb5-kdc restart
+: 1485605449:0;sudo service krb5-admin-server restart
+: 1485605594:0;klist -e -k -t /opt/admin.keytab
+: 1485628188:0;kdb5_util create -r EXAMPLE.COM -s
+: 1485628206:0;kdb5_util create -r elevy -s
+: 1485628285:0;ll /etc/krb5kdc/principal
+: 1485628292:0;sudo ll /etc/krb5kdc/principal
+: 1485628302:0;sudo ls /etc/krb5kdc/principal
+: 1485628309:0;sudo ls /etc/krb5kdc
+: 1485628388:0;kdb5_util create -r elevy -s
+: 1485628447:0;sudo chmod 777 -R /etc/krb5kdc 
+: 1485628884:0;kadmin -p elevy/admin@elevy
+: 1485629129:0;ktutil
+: 1485629208:0;sudo dpkg-reconfigure krb5-kdc
+: 1485629218:0;sudo service krb5-admin-server restart
+: 1485629223:0;sudo service krb5-kdc restart
+: 1485676441:0;su - hduser
+: 1485763610:0;. /bin/bash
+: 1485763616:0;/bin/bash
+: 1485764037:0;sudo rm -v /bin/sh
+: 1485764048:0;sudo ln -sv /bin/bash /bin/sh
+: 1485764269:0;su -hduser
+: 1485764273:0;su - hduser
+: 1485794693:0;sudo - hduser
+: 1485794707:0;su - hduser
+: 1485849389:0;keytool -keystore /home/hduser/.keystore -alias localhost -validity 365 -genkey
+: 1485850361:0;cp ~/.bashrc{,.bak}
+: 1485850372:0;cp /etc/skel/.bashrc ~/.bashrc
+: 1485850427:0;sudo gedit ~/.bashrc
+: 1485850438:0;sudo gedit ~/.bashrc &
+: 1485850446:0;sudo gedit ~/.bashrc-anaconda3.bak
+: 1485850456:0;sudo gedit ~/.bashrc.bak
+: 1485850638:0;exit
+: 1485850673:0;/bin/zsh
+: 1485850725:0;echo $SHELL
+: 1485850737:0;/bin/bash : This is the Bash shell.
+: 1485850747:0;. /bin/bash
+: 1485850906:0;chsh -s  /bin/bash
+: 1485850925:0;exit
+: 1485850929:0;quit
+: 1485850943:0;echo $SHELL
+: 1485851033:0;$(which zsh)
+: 1485851039:0;echo $(which zsh)
+: 1485851093:0;ll
+: 1485851097:0;ll -a 
+: 1485851131:0;echo $ZSH_CUSTOM
+: 1485851232:0;git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+: 1485856877:0;sudo vim ~/.zshrc
+: 1485857035:0;su - hduser
+: 1485857282:0;sudo vim ~/.zshrc
+: 1485861890:0;su - hduser 
+: 1485933627:0;tail -f /opt/hadoop-2.7.3/logs/hadoop-hduser-datanode-eyallevy.log
+: 1486911195:0;su - hduser
+: 1486911950:0;cd /opt
+: 1486912022:0;ss.sh
+: 1486912034:0;su - hduser
+: 1486912418:0;exit
+: 1486915437:0;cd /opt/git/tr-spark-ml
+: 1486915475:0;git status 
+: 1486915487:0;git reset HEAD
+: 1486915496:0;git checkout .
+: 1486917242:0;cd /opt/git
+: 1486917250:0;cd /opt/git/tr-spark-ml
+: 1486917768:0;exit
+: 1486990535:0;git pull
+: 1486990694:0;git checkout feature-MVP-3081-spark-job
+: 1486990698:0;git pull
+: 1486990746:0;mvn clean install
+: 1486991280:0;cd /opt/git
+: 1487524960:0;
+: 1487524960:0;
+: 1486991368:0;cd /opt/gi
+: 1486991371:0;cd /opt/git
+: 1486991395:0;git clone git@bitbucket.org:thetaray/tr-post-analysis
+: 1486991480:0;git clone git@bitbucket.org:thetaray/tr-post-analysis-apps
+: 1486991557:0;cd tr-post-analysis-apps
+: 1486991563:0;mvn clean install
+: 1486991876:0;git pull
+: 1486992045:0;git log 
+: 1486992177:0;git checkout  feature-MVP-3081
+: 1486992181:0;git pull
+: 1486992200:0;mvn clean install
+: 1487002584:0;cd ../tr-spark-ml
+: 1487002588:0;git log 
+: 1487002912:0;git status
+: 1487060566:0;docker start tr-zeppelin
+: 1487060572:0;docker ps
+: 1487062382:0;cd /opt/Dropbox/\
+: 1487062383:0;cd /opt/Dropbox/
+: 1487062413:0;ll
+: 1487062428:0;sudo rm -rf sublime_my_changes/*
+: 1487065901:0;cd /opt/Dropbox/spark-notebook
+: 1487065908:0;bin/spark-notebook
+: 1487066653:0;tail 10 /opt/data/QR_500K.csv
+: 1487066666:0;tail 1 /opt/data/QR_500K.csv
+: 1487066690:0;tail -1 /opt/data/QR_500K.csv
+: 1487153141:0;git checkout master
+: 1487153145:0;git pull
+: 1487153171:0;git checkout -b integrity-per-column
+: 1487229748:0;head 1 /opt/data/QR_500K.csv
+: 1487259261:0;git checkout feature-MVP-3081-integ
+: 1487259266:0;git pull
+: 1487259590:0;mvn clean install
+: 1487259689:0;cd /opt/Dropbox/git/tr-post-analysis-apps
+: 1487259742:0;mvn clean install
+: 1487265299:0;git pull
+: 1487497795:0;cd /opt/Dropbox/git/tr-spark-ml
+: 1487504789:0;chrome
+: 1487504814:0;google-chrome
+: 1487510033:0;/opt/Dropbox/tools/idea/bin/idea.sh
+: 1487510159:0;ll
+: 1487510180:0;cd cd /opt/Dropbox/tools/
+: 1487510183:0;cd /opt/Dropbox/tools/
+: 1487510184:0;ll
+: 1487510198:0;chmod 777 openURLs.sh
+: 1487510226:0;./openURLs.sh
+: 1487510260:0;cd idea
+: 1487510275:0;./bin/idea.sh
+: 1487510284:0;./bin/idea.sh &
+: 1487512146:0;idea.sh
+: 1487512150:0;./idea.sh
+: 1487512200:0;./idea.sh &
+: 1487512467:0;ll -al
+: 1487512477:0;idea.sh
+: 1487512506:0;bash
+: 1487513134:0;cd /
+: 1487513160:0;/opt/Dropbox/tools/idea/bin/idea.sh
+: 1487513475:0;gksudo nautilus~
+: 1487513478:0;gksudo nautilus
+: 1487513482:0;sudo nautilus
+: 1487582835:0;cd /opt/Dropbox/dev/git/tr-spark-ml
+: 1487582855:0;cd /opt/Dropbox/dev/git/tr-post-analysis-apps
+: 1487582887:0;cd /opt/Dropbox/dev/git/detection-center
+: 1487582891:0;git pull
+: 1487582913:0;git checkout feature-MVP-3081-integ
+: 1487582917:0;git pull
+: 1487582924:0;git checkout .
+: 1487582984:0;git reset HEAD
+: 1487582990:0;git clean -df
+: 1487582995:0;git checkout .
+: 1487582999:0;git pull
+: 1487583017:0;git checkout master
+: 1487583022:0;git pull
+: 1487583033:0;git checkout feature-MVP-3081-integ
+: 1487583047:0;git checkout master 
+: 1487583051:0;git pull
+: 1487583059:0;git checkout feature-MVP-308
+: 1487583063:0;git checkout feature-MVP-3081
+: 1487583066:0;git pull
+: 1487583086:0;git checkout master 
+: 1487583089:0;git pull
+: 1487583103:0;git checkout feature-MVP-3081
+: 1487583108:0;git pull
+: 1487590496:0;git checkout master
+: 1487590500:0;git pull
+: 1487590525:0;git checkout feature-MVP-3081
+: 1487590528:0;git pull
+: 1487590591:0;git merge master
+: 1487590603:0;git mergetool
+: 1487591378:0;mvn clean install
+: 1487591483:0;git merge master
+: 1487591836:0;git status
+: 1487591934:0;git commit -am "merge from master"
+: 1487591947:0;git push 
+: 1487591986:0;git status 
+: 1487592032:0;mvn clean install
+: 1487592246:0;mvn <goals> -rf :theta-clusters
+: 1487592251:0;mvn clean install
+: 1487592556:0;ls
+: 1487592577:0;cd thetaray-core
+: 1487592581:0;mvn clean install
+: 1487593046:0;lg
+: 1487593056:0;git status
+: 1487593063:0;git reset HEAD
+: 1487593070:0;git checkout .
+: 1487593074:0;lg
+: 1487593101:0;git lg
+: 1487593114:0;git ll
+: 1487593170:0;clear
+: 1487593184:0;mvn clean install
+: 1487593240:0;cd ../detection-center
+: 1487593248:0;cd thetaray-core
+: 1487593258:0;mvn clean install
+: 1487593266:0;git pull
+: 1487593582:0;git checkout master
+: 1487593592:0;git pull
+: 1487593606:0;git log
+: 1487593894:0;cd ..
+: 1487593908:0;git clone git clone git@bitbucket.org:thetaray/tr-all.git
+: 1487593915:0;git clone git@bitbucket.org:thetaray/tr-all.git
+: 1487594969:0;cd detection-center
+: 1487594986:0;git checkout feature-MVP-3081
+: 1487594989:0;git pull
+: 1487595000:0;mvn clean install
+: 1487595011:0;cd thetaray-core
+: 1487595013:0;mvn clean install
+: 1487595039:0;cd ../tr-spark-ml
+: 1487595041:0;git pull
+: 1487595089:0;mvn clean install
+: 1487595350:0;git status
+: 1487595370:0;git log 
+: 1487595386:0;			git log
+: 1487595481:0;git commit -am "MVP-4686: add SNAPSHOT to algo dependency"
+: 1487595487:0;git push
+: 1487601323:0;Ssh ec2-user@172.16.1.192
+: 1487601328:0;ssh ec2-user@172.16.1.192
+: 1487601421:0;ssh-add ~/.ssh/tr-key.pem
+: 1487601428:0;ssh ec2-user@172.16.1.192
+: 1487602498:0;docker images
+: 1487602529:0;docker start activemq
+: 1487602540:0;docker start ca891b936f9d
+: 1487602624:0;docker start tr-dc-mq
+: 1487602634:0;docker ps 
+: 1487602651:0;docker start tr-psql
+: 1487602665:0;git status
+: 1487604933:0;mvn clean install
+: 1487661468:0;cd /opt/Dropbox/dev/git/tr-post-analysis-apps
+: 1487661471:0;git status
+: 1487661813:0;git pull
+: 1487662016:0;git push
+: 1487662084:0;cd ../tr-
+: 1487662090:0;cd ../tr-spark-ml
+: 1487662095:0;git status
+: 1487662630:0;cd /opt/Dropbox/dev/git/tr-post-analysis-apps
+: 1487662633:0;gts
+: 1487662678:0;cgit
+: 1487662748:0;cdgt
+: 1487662814:0;ll
+: 1487662820:0;gts
+: 1487662828:0;cdgt
+: 1487662860:0;cd /opt/Dropbox/dev/git/tr-post-analysis-apps
+: 1487662864:0;gts
+: 1487662927:0;cd /opt/Dropbox/dev/git
+: 1487662929:0;cd tr
+: 1487662936:0;cd tr-post-analysis-apps
+: 1487662940:0;gts
+: 1487662943:0;git status
+: 1487662980:0;gts
+: 1487663113:0;cdgt
+: 1487663395:0;$BASH_VERSION
+: 1487663511:0;cdgt
+: 1487663529:0;cd tr-spark-ml
+: 1487663532:0;gts
+: 1487663545:0;git checkout .
+: 1487663548:0;git pull
+: 1487663555:0;git log
+: 1487664182:0;gts
+: 1487664409:0;git status
+: 1487665128:0;git checkout .
+: 1487665134:0;git reset HEAD
+: 1487665141:0;git clean -Df
+: 1487665144:0;git clean -df
+: 1487665147:0;git checkout .
+: 1487665150:0;gts
+: 1487665726:0;git pull
+: 1487665734:0;git merge master
+: 1487670545:0;git status
+: 1487670631:0;gts
+: 1487680563:0;git pull
+: 1487680578:0;git checkout master
+: 1487680582:0;git pull
+: 1487680595:0;git checkout feature-MVP-3081-integ
+: 1487680602:0;git merge master
+: 1487680614:0;git status
+: 1487680620:0;git diff
+: 1487680676:0;git checkout master
+: 1487680688:0;git merge origin/feature-MVP-3081-integ
+: 1487680706:0;gts
+: 1487680710:0;git push 
+: 1487680720:0;git log 
+: 1487683822:0;cd ../detection-center
+: 1487683827:0;git checkout master
+: 1487683835:0;git status
+: 1487683842:0;git diff
+: 1487683876:0;cdgt
+: 1487683880:0;cd tr-spark-ml
+: 1487683890:0;git log 
+: 1487683924:0;git commit -am "update classification and core version to ${project.version}"
+: 1487683937:0;git status
+: 1487683947:0;git commit -am "update classification and core version to project.version"
+: 1487683950:0;git push
+: 1487683959:0;git checkout master
+: 1487683963:0;git pull
+: 1487683980:0;git merge feature-MVP-3081
+: 1487683985:0;git push
+: 1487684041:0;git commit -am "fix pom conflict"
+: 1487684055:0;git push
+: 1487684081:0;cd ../tr-post-analysis-apps
+: 1487684088:0;git status
+: 1487684123:0;git commit -am "update classification and core version to project.version"
+: 1487684126:0;git push
+: 1487684135:0;git checkout master
+: 1487684138:0;git pull
+: 1487684158:0;git merge feature-MVP-3081
+: 1487684255:0;git commit -am "fix conflict in pomgit status
+: 1487684260:0;git status
+: 1487684280:0;git commit -am "fix conflict in pom"
+: 1487684285:0;git push
+: 1487684540:0;mvn clean install
+: 1487685939:0;cd ../tr-post-analysis-apps
+: 1487685949:0;cd ../detection-center
+: 1487685959:0;clear
+: 1487686095:0;mvn clean -Pdc-backend
+: 1487686115:0;mvn install -Pdc-backend
+: 1487687589:0;cd ../detection-center
+: 1487687893:0;cd ../tr-spark-ml
+: 1487687919:0;git branch
+: 1487687933:0;git checkout  MVP-4516-uploading-sample-data-from-seve
+: 1487687940:0;git log 
+: 1487751972:0;docker start tr-psql
+: 1487751983:0;docker start tr-dc-mq
+: 1487753366:0;docker stop tr-psql
+: 1487753485:0;docker images -f "dangling=true" -q
+: 1487753489:0;docker images -f "dangling=true"
+: 1487753494:0;docker images 
+: 1487753520:0;docker rmi 96c35bce890b
+: 1487753540:0;docker ps -a -q -f status=exited
+: 1487753546:0;docker ps -a -f status=exited
+: 1487753563:0;docker rm -v ccf85c11cec2
+: 1487753580:0;docker rmi 96c35bce890b
+: 1487753632:0;docker run --name tr-psql -e POSTGRES_PASSWORD=theta -p 5432:5432 -p 9083:9083 -d 172.16.1.191:5000/thetaray/tr-postgres:2.1.3-SNAPSHOT.680
+: 1487753646:0;sudo vi /lib/systemd/system/docker.service
+: 1487753751:0;sudo systemctl daemon-reload
+: 1487753758:0;sudo service docker restart
+: 1487753777:0;ps -ef | grep docker
+: 1487753795:0;sudo service docker stop
+: 1487753819:0;sudo vi /lib/systemd/system/docker.service
+: 1487753851:0;sudo systemctl daemon-reload
+: 1487753854:0;sudo service docker restart
+: 1487753860:0;ps -ef | grep docker
+: 1487753865:0;docker ps
+: 1487753878:0;docker run --name tr-psql -e POSTGRES_PASSWORD=theta -p 5432:5432 -p 9083:9083 -d 172.16.1.191:5000/thetaray/tr-postgres:2.1.3-SNAPSHOT.680
+: 1487753921:0;docker run --name tr-psql -e POSTGRES_PASSWORD=theta -p 5432:5432 -p 9083:9083 -d docker-registry.thetaray-aws.com:5000/thetaray/tr-postgres:2.1.3-SNAPSHOT.680
+: 1487754135:0;docker ps
+: 1487754150:0;docker start tr-dc-mq
+: 1487756429:0;sudo gedit proxy.csv
+: 1487757884:0;sudo gedit proxy.csv proxy1.csv proxy2.csv&
+: 1487763263:0;cd /opt/Dropbox/dev/git/Dropbox
+: 1487763275:0;cd /opt/Dropbox/dev/git/tr-spark-ml
+: 1487763293:0;git log
+: 1487763307:0;git diff
+: 1487763333:0;gts
+: 1487769730:0;git pull
+: 1487769742:0;git status
+: 1487769747:0;git checkout .
+: 1487769756:0;git checkout master
+: 1487769760:0;git pull
+: 1487772086:0;git checkout MVP-4516-uploading-sample-data-from-seve
+: 1487772090:0;git pull 
+: 1487772097:0;git merge master
+: 1487833544:0;git merge origin master
+: 1487833552:0;git checkout master
+: 1487833556:0;git pull
+: 1487833570:0;git checkout MVP-4516-uploading-sample-data-from-seve
+: 1487833576:0;git pull
+: 1487833583:0;git merge master
+: 1487833587:0;git checkout master
+: 1487833601:0;git merge MVP-4516-uploading-sample-data-from-seve
+: 1487837844:0;cdgt
+: 1487837847:0;cd tr-
+: 1487837859:0;cd tr-spark-ml
+: 1487837862:0;git status
+: 1487837871:0;git push 
+: 1487839296:0;jps
+: 1487839314:0;sudo service cassandra status
+: 1487839324:0;cql
+: 1487839866:0;cqlsh
+: 1487855225:0;echo $ZSH
+: 1487855428:0;cqlsh
+: 1487856163:0;cslsh
+: 1487856168:0;cqlsh
+: 1487857323:0;sudo service cassandra status
+: 1487857563:0;cd /
+: 1487857581:0;find . -name "cassandra.jar"
+: 1487857595:0;sudo find . -name "cassandra.jar"
+: 1487858005:0;ll
+: 1487858012:0;java
+: 1487858036:0;clear
+: 1487858038:0;ll
+: 1487858043:0;java cassandra-gui.jar
+: 1487858066:0;cd ..
+: 1487858072:0;java cassandra-gui-0.7.1
+: 1487858108:0;sudo service cassandra status
+: 1487858124:0;ps -ef | grep cassandra
+: 1488095032:0;sudo service cassandra status
+: 1488095042:0;cqlsh
+: 1488097946:0;vim /etc/passwd
+: 1488098704:0;ls -A
+: 1488098718:0;ls 
+: 1488098721:0;ll
+: 1488098724:0;ll -A
+: 1488109220:0;mkdir ~/dotfiles
+: 1488116914:0;cd "$(dirname "$0")/.."
+: 1488116925:0;$(dirname "$0")
+: 1488116936:0;$(dirname)
+: 1488116947:0;$dirname
+: 1488116953:0;echo !
+: 1488116960:0;echo $dirname
+: 1488275492:0;cd ../tr-post-analysis-apps
+: 1488275503:0;git pull
+: 1488275527:0;git checkout feature-MVP-4949
+: 1488275533:0;git pull
+: 1488280000:0;mvn clean install
+: 1488283036:0;cd /opt/Dropbox/dev/git/tr-post-analysis-apps
+: 1488283042:0;mvn clean install
+: 1488287105:0;gts
+: 1488287111:0;git push
+: 1488287143:0;shorty
+: 1488287165:0;git shorty
+: 1488295134:0;cd ../tr-post-analysis-apps
+: 1488295139:0;mvn clean install
+: 1488295525:0;cd ../tr-post-analysis-apps
+: 1488295533:0;mvn clean install
+: 1543846857:0;chmod 600 -R .ssh
+: 1543846877:0;cd ~
+: 1543846882:0;chmod 600 -R .ssh
+: 1543846887:0;sudochmod 600 -R .ssh
+: 1543846891:0;sudo chmod 600 -R .ssh
+: 1543847534:0;sudo ls
+: 1580738756:0;git status 
+: 1580738768:0;git diff 
+: 1580738918:0;myssh 0.125
+: 1580738930:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.125"
+: 1580738932:0;myssh 0.125
+: 1580739757:0;ls
+: 1580739777:0;pwd
+: 1580739791:0;ls -la
+: 1580739805:0;cd .dropbox
+: 1580739806:0;ls
+: 1580739820:0;cd instance
+: 1580739822:0;cd instance1
+: 1580739823:0;ls
+: 1580739829:0;cat config.dbx
+: 1580739834:0;ls
+: 1580739875:0;find . -name "appdata"
+: 1580739879:0;find / -name "appdata"
+: 1580739886:0;sudo find / -name "appdata"
+: 1580809972:0;mvn clean install
+: 1580811087:0;mvn clean install _X
+: 1580811092:0;mvn clean install -X
+: 1580816503:0;cd bin
+: 1580816562:0;cd ..
+: 1580816573:0;java -jar bin/crawler-1.0-SNAPSHOT.jar "http://www.mit.edu" 2
+: 1580816831:0;mvn clean install 
+: 1580816976:0;mvn clean install shade
+: 1580816980:0;mvn clean install 
+: 1580817013:0;java -jar bin/crawler.jar "http://www.mit.edu" 2
+: 1580817041:0;ls
+: 1580817053:0;java -jar bin/crawler.jar "http://www.mit.edu" 2
+: 1580817147:0;cd bin
+: 1580817176:0;./run.sh
+: 1580817187:0;chmod 777 *
+: 1580817189:0;./run.sh
+: 1580903239:0;cat /etc/group
+: 1580903257:0;sudo cat /etc/shadow
+: 1580903287:0;cat /etc/passswd 
+: 1580903293:0;cat /etc/passwd 
+: 1580903391:0;reboot 
+: 1581250275:0;myssh 1.89
+: 1581348883:0;cd /opt/Dropbox/tr-backend/
+: 1581348895:0;git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | awk '$1 == "eyal" {print $2}'
+: 1581348899:0;git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | awk '$1 == "Eyal" {print $2}'
+: 1581350839:0;ping tr-5-ilyag-es-perf-manager.thetaraydev.com/
+: 1581350852:0;ping tr-5-ilyag-es-perf-manager.thetaraydev.com
+: 1581350860:0;myssh 1.178
+: 1581368197:0;myssh 0.160
+: 1581435206:0;myssh 0.107
+: 1581435292:0;myssh 1.107
+: 1581504694:0;ping tr-5-natalyaa-rnd-manager.thetaraydev.com
+: 1581504705:0;myssh 0.189
+: 1581504712:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.189"
+: 1581504714:0;myssh 0.189
+: 1581511784:0;ping tr-5-natalyaa-idan-manager.thetaraydev.com
+: 1581511797:0;myssh 0.228
+: 1581511806:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.228"
+: 1581511807:0;myssh 0.228
+: 1581542574:0;./idea.sh &
+: 1581584959:0;pwd
+: 1581584976:0;cd /home/eyal.levy/Desktop/Dropbox/devtool/ideaIU-2019.3.3\
+
+: 1581584983:0;cd bin
+: 1581584988:0;./idea.sh &
+: 1581588129:0;ping https://tr-5-natalyaa-idan-manager.thetaraydev.com/
+: 1581588135:0;ping tr-5-natalyaa-idan-manager.thetaraydev.com/
+: 1581588139:0;ping tr-5-natalyaa-idan-manager.thetaraydev.com
+: 1581588147:0;myssh 0.228
+: 1581588184:0;myssh 0.226
+: 1582042126:0;cd /opt/Dropbox/tr-backend/
+: 1582042704:0;env
+: 1582116524:0;ping tr-5-rivkia-export-manager.thetaraydev.com
+: 1582116539:0;myssh 1.15
+: 1582116547:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.1.15"
+: 1582116548:0;myssh 1.15
+: 1582125424:0;myssh 0.225
+: 1582125430:0;myssh 0.255
+: 1582129158:0;cd /opt/Dropbox/tr-backend/
+: 1582129161:0;git status 
+: 1582534399:0;myssh 1.173
+: 1582632949:0;git checkout talos-fixes
+: 1582632980:0;cleasr
+: 1582632982:0;clear
+: 1582632984:0;git pull 
+: 1582706593:0;myssh 0.203
+: 1582710477:0;git commite -am "increase gatekeeper timeout "
+: 1582710485:0;git commit -am "increase gatekeeper timeout "
+: 1582710491:0;git push origin master
+: 1582710513:0;git pull
+: 1582710524:0;git push origin master
+: 1582711322:0;myssh 0.203
+: 1582715230:0;cd /opt/Dropbox/tr-backend/
+: 1582715235:0;cd ..
+: 1582715239:0;git clone git@bitbucket.org:thetaray/tr-backend.git
+: 1582715362:0;git status 
+: 1582715727:0;myssh 0.203
+: 1582722246:0;nmcli con show 
+: 1582722274:0;nmcli dev show 
+: 1582722285:0;ip addr 
+: 1582722305:0;ifconfig 
+: 1582722346:0;systemctl stop network
+: 1582722358:0;sudo systemctl stop network
+: 1582722397:0;sudo systemctl stop networking.service
+: 1582722405:0;sudo systemctl start networking.service
+: 1582722416:0;sudo systemctl status networking.service
+: 1582722432:0;ping 8.8.8.8
+: 1582722441:0;sudo systemctl status networking.service
+: 1582722446:0;nmcli con show 
+: 1582722668:0;ifconfig 
+: 1582722785:0;sudo systemctl stop networking.service
+: 1582722792:0;ifconfig 
+: 1582722815:0;sudo systemctl start networking.service
+: 1582722853:0;sudo systemctl status networking.service
+: 1582722964:0;ping 8.8.8.8
+: 1582722999:0;service network stop
+: 1582723005:0;sudo service network stop
+: 1582723012:0;sudo service networking stop
+: 1582723022:0;sudo systemctl status networking.service
+: 1582723044:0;service network start
+: 1582723051:0;sudo service network start
+: 1582723057:0;sudo service networking start
+: 1582723182:0;nmcli connection add
+: 1582723601:0;ifconfig -a
+: 1582723635:0;ifconfig cni0 down
+: 1582723639:0;sudo ifconfig cni0 down
+: 1582723651:0;sudo ifconfig cni0 up
+: 1582723655:0;ifconfig -a|more
+: 1582723711:0;nmcli con show
+: 1582723731:0;sudo ifconfig br-02bdca7fab14 down
+: 1582723734:0;nmcli con show
+: 1582723739:0;sudo ifconfig br-02bdca7fab14 up
+: 1582723740:0;nmcli con show
+: 1582723744:0;ifconfig -a|more
+: 1582723769:0;sudo ifconfig br-02bdca7fab14 down
+: 1582723773:0;sudo ifconfig cni0 down
+: 1582723776:0;nmcli con show
+: 1582723784:0;ifconfig -a|more
+: 1582723805:0;sudo ifconfig cni0 unplumb
+: 1582723843:0;locate network
+: 1582723852:0;locate network|more
+: 1582723868:0;cd /etc/init.d
+: 1582723868:0;ls
+: 1582723887:0;sudo ifconfig br-02bdca7fab14 up
+: 1582723892:0;sudo ifconfig cni0 up
+: 1582828427:0;myssh 0.161
+: 1582828442:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.0.161"
+: 1582828444:0;myssh 0.161
+: 1582828630:0;myssh 0.157
+: 1582829006:0;myssh 0.161
+: 1583057198:0;myssh 0.203
+: 1583221698:0;myssh 1.113
+: 1583221704:0;ssh-keygen -f "/home/eyal.levy/.ssh/known_hosts" -R "172.18.1.113"
+: 1583221706:0;myssh 1.113
+: 1583244364:0;cd /opt/Dropbox/tr-backend/
+: 1583244366:0;cd ..
+: 1583244376:0;git clone https://github.com/keycloak/keycloak-gatekeeper.git
+: 1583246891:0;myssh 1.113
+: 1583409554:0;ifconfig -a|more
+: 1583409644:0;ip a
+: 1583410345:0;netstat -rn
+: 1583410523:0;ip a|more
+: 1583410803:0;netstat -rn
+: 1583410837:0;ip a|more
+: 1583410907:0;cat /etc/hosts
+: 1583410934:0;cd /etc/network
+: 1583410935:0;ls
+: 1583410941:0;cd interfaces.d
+: 1583410942:0;ls
+: 1583410944:0;ls -la
+: 1583410948:0;cd .
+: 1583410950:0;cd ..
+: 1583410952:0;cat interfaces
+: 1583411356:0;cat /etc/network/interfaces
+: 1583411379:0;lshw -C network
+: 1583411522:0;lshw -C network|grep enx
+: 1583411531:0;sudo lshw -C network|grep enx
+: 1583411652:0;lshw -C network|more
+: 1583411681:0;sudo lshw -C network|more
+: 1583412023:0;cat /etc/network/interfaces
+: 1583412185:0;sudo lshw -C network
+: 1583412201:0;nm-tool
+: 1583412222:0;cat /etc/NetworkManager/NetworkManager.conf
+: 1583412354:0;cat /var/lib/NetworkManager/NetworkManager.state
+: 1583412385:0;cat /var/lib/NetworkManager/NetworkManager-intern.conf
+: 1583412547:0;cat /etc/network/interfaces
+: 1583412837:0;ifocnfig -a
+: 1583412839:0;cd
+: 1583412841:0;ifconfig -a
+: 1583412948:0;lspci
+: 1583413078:0;lsetc/init.d
+: 1583413083:0;ls /etc/init.d
+: 1583413165:0;modprobe
+: 1583413172:0;modprobe -h
+: 1583414240:0;man NetworkManager
+: 1583414305:0;sudo  NetworkManager pre-up
+: 1583414318:0;man NetworkManager
+: 1583414341:0;man NetworkManager `\
+sudo  NetworkManager pre-upq\
+:q
+: 1583414346:0;sudo  NetworkManager up
+: 1583414357:0;man NetworkManager \
+sudo  NetworkManager pre-upq\
+:q
+: 1583422766:0;dpkg --configure -a 
+: 1583422773:0;sudo dpkg --configure -a 
+: 1583423349:0;sudo add-apt-repository universe
+: 1583423372:0;sudo apt install gnome-tweak-tool
+: 1583423385:0;gnomr-tweak
+: 1583423391:0;gnome-tweak
+: 1583424241:0;sudo gnome-tweak
