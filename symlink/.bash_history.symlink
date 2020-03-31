@@ -628,3 +628,60 @@ intellij
 idea.sh
 find idea.sh
 find . idea.sh
+gcloud 
+sudo snap install google-cloud-sdk
+sudo snap install --classic google-cloud-sdk 
+gcloud 
+gcloud container clusters get-credentials ci-environments --zone us-east1-b --project tr-rnd
+gcloud auth login
+gcloud container clusters get-credentials ci-environments --zone us-east1-b --project tr-rnd
+k get namespace
+gcloud container clusters get-credentials ci-environments --zone us-east1-b --project tr-rnd
+k get namespace
+zsh
+rm -R /var/lib/docker
+sudo rm -R /var/lib/docker
+zsh
+kubectl port-forward tr-es-cluster-master-0 9200
+zsh
+k get pods
+zsh
+kubens eyall-pipeline 
+k get pods
+zsh
+snap remove docker
+rm -R /var/lib/docker
+sudo rm -R /var/lib/docker
+ls /var/lib
+sudo apt-get remove docker docker-engine docker.io
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+chmod 777 -R ~/docker/
+docker ps
+docker stop postgres
+docker rmi postgres 
+docker rmi -f postgres 
+zsh
+docker_postgres_1
+git clone git@bitbucket.org:thetaray/realtime-implementation.git
+zsh
+cd data/
+sudo cd data
+sudo rm -rf  data
+zsh
+ssh -i ~/.ssh/tr-key.pem thetaray@tr-5-jenkins-reg-3-manager.thetaraydev.com
+ssh -i ~/.ssh/tr-key.pem thetaray@172.18.0.151
+cd /opt/dev
+git clone git@bitbucket.org:thetaray/realtime-implementation.git
+בג ץץ
+ב גץץ
+cd ..
+git pull

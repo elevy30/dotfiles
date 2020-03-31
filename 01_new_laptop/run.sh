@@ -63,6 +63,18 @@ echo install COPYQ
 echo open show/hide -> press F6 -> press the "+ Add" -> select "Show/hide main window" -> add shortcut "ctrl+`
 read -p "press ENTER when done" 
 
+# K8S
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+# https://github.com/derailed/k9s
+sudo apt update
+sudo snap install k9s
+
+# skaffold
+curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+chmod +x skaffold
+sudo mv skaffold /usr/local/bin
 
 addToPath(){
 	if [ -d  "$1" ] && [[":$PATH:" != *":$1:"*]];

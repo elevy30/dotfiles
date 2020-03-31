@@ -9,3 +9,4 @@ export MAVEN_HOME=/opt/apache-maven-3.6.3
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/tr-rnd-maven.json
 
+
