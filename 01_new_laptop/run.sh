@@ -28,11 +28,12 @@ export MAVEN_HOME=/opt/apache-maven-3.6.3
 addToPath ${M2_HOME}/bin
 
 # JAVA
+# https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOpenJdkDeb.html
 sudo apt --assume-yes install openjdk-8-jdk
 sudo apt --assume-yes install openjdk-11-jdk
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export JDK11_HOME=/opt/dev/java-11-openjdk-amd64
-export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/tr-rnd-maven.json
+export JDK11_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export GOOGLE_APPLICATION_CREDENTIALS=11/.ssh/tr-rnd-maven.json
 
 # TERMINATOR
 sudo apt --assume-yes install terminator
