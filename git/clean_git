@@ -1,0 +1,30 @@
+https://github.com/18F/C2/issues/439
+
+
+
+Hi. I just cloned this repo and it ended up being 83MB. The biggest file is a 77MB pack in .git/objects/pack.
+
+To see the 10 biggest files, run this from the root directory:
+
+git verify-pack -v .git/objects/pack/pack-7b03cc896f31b2441f3a791ef760bd28495697e6.idx \
+| sort -k 3 -n \
+| tail -10
+To see what each file is, run this:
+
+git rev-list --objects --all | grep [first few chars of the sha1 from previous output]
+Most of the files are .png, and the last one in the list is a .mov, which I would guess takes up most of the space. There are also .csv and .pdf files. The next step would be to clean up your git by removing all of those unnecessary files.
+
+One option is to use the bfg-repo-cleaner tool, which worked great for me on other repos I've tried it on.
+
+Alternatively, you could do it manually following this git article, as outlined below:
+
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch *.mov' -- --all
+rm -Rf .git/refs/original
+rm -Rf .git/logs/
+git gc --aggressive --prune=now
+Then repeat with other types of files.
+
+Then verify:
+
+git count-objects -v
+Your size-pack should be a lot smaller now.
