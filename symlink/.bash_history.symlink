@@ -685,3 +685,4 @@ git clone git@bitbucket.org:thetaray/realtime-implementation.git
 ב גץץ
 cd ..
 git pull
+zsh
