@@ -1,0 +1,12 @@
+
+#java
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+export JDK11_HOME=/opt/java-11-openjdk-amd64
+
+# maven
+export M2_HOME=/opt/apache-maven-3.6.3
+export MAVEN_HOME=/opt/apache-maven-3.6.3
+
+export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/tr-rnd-maven.json
+
+
