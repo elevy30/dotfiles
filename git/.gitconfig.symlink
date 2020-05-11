@@ -44,3 +44,5 @@
 	deleted = yellow normal bold
 [include]
 	path = ~/.gitconfig.local
+[http]
+	sslVerify = false
