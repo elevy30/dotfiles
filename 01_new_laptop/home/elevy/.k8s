@@ -1,0 +1,75 @@
+#!/usr/bin/env zsh
+
+# print each command when execute 
+# set -v
+cp /usr/local/bin/kubectl ~/kubectl
+source <(kubectl completion zsh)
+alias k=kubectl
+complete -F __start_kubectl k
+
+start_s3d(){
+	echo "startig the s3d env with 'k3d start' command (namespace=local)"
+	k3s_container=$(docker ps --format 'table {{.Names}}'| grep k3s)
+	if [ -z "${k3s_container}" ]
+	then
+	      echo "k3s_container=$k3s_container is NOT RUNNING (run k3d start)"
+	      k3d start
+	else
+	      echo "k3s_container=$k3s_container is RUNNING"
+	fi
+
+	echo "setting KUBECONFIG to $(k3d get-kubeconfig --name='k3s-default')"
+	export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
+
+	kubectl get nodes
+
+	kubectl config set-cluster k3s-default
+	kubectl config use-context k3s-default
+
+	echo "setting namesapce=local"
+	#kubens local
+}
+
+connect_to_gcp(){
+	echo "connecting to GCP kubernetes cluster"
+	gcloud container clusters get-credentials ci-environments --zone us-east1-b --project tr-rnd
+	kubens "$(k get namespace -o=custom-columns=NAME:.metadata.name | grep eyal)"
+}
+
+
+while true ; do
+	echo -n "Would you like to connect to remote GCP(r) or to local S3D(l) Skip(s): "
+	#echo "Would you like to connect to remote GCP(r) or to local S3D(l)?"
+	read action
+	case "$action" in
+		r)
+			connect_to_gcp
+			break
+			;;
+		l)
+			start_s3d
+			break
+			;;
+		s)
+			break
+			;;
+		*)
+	esac
+done
+
+
+
+
+
+kubectl config view
+
+
+
+
+
+# export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+# env KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+# kubectl config get-contexts
+
+# echo 'elBI22pt!' | sudo -S chmod 777 /etc/rancher/k3s/k3s.yaml
+# echo 'elBI22pt!' | sudo -S chmod 777 /var/run/docker.sock
