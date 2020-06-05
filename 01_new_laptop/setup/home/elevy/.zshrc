@@ -104,10 +104,7 @@ export DOCKER_HOST=tcp://localhost:2375
 
 cd /opt/dev/ginger
 
-source ~/.k8s
 source ~/.oh-my-zsh/plugins/git-prompt/git-prompt.plugin.zsh
-
-
 
 k port-forward services/ginger-spark-webui 8088:8088 &
 k port-forward services/ginger-spark-zeppelin 9000:8080 &
