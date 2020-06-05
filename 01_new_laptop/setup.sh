@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 ##################################################
 # print each command before runing it
 # set -v 
@@ -11,7 +9,7 @@
 # PASSWORD=elevy
 # echo $PASSWORD | sudo tee /etc/sudoer.d/$USER <<END
 # END
-
+##################################################
 pushd `dirname "$0"` > /dev/null
 
 #ROOT = /opt/dev/dotfiles/01_new_laptop
@@ -31,6 +29,7 @@ addToPath(){
       fi  
     fi
 }
+##################################################
 
 ###### CHROME ###### 
   if [ ! -e google-chrome-stable_*.deb ]; then
@@ -84,11 +83,14 @@ addToPath(){
     sed -e '/RPROMPT*/ s/^#*/#/g' -i ${GIT_PROMPT}
     echo "setopt PROMPT_SUBST" >>    ${GIT_PROMPT}
     echo "PROMPT='%("'!'".%F{red}.%F{cyan})%n%f %F{red}@%f %{%F{yellow bold}\$(pwd)%\${#PWD}G%}%f \$(git_super_status)'"  >> ${GIT_PROMPT}
+    echo "" >> ${GIT_PROMPT}
   fi
   
   ZSH=~/.zshrc
   sed -e 's/plugins=(git)/plugins=(git git-prompt zsh-autosuggestions)/g' -i ${ZSH}
+  echo "alias python=python3" >> ${ZSH}
   echo "source ~/.oh-my-zsh/plugins/git-prompt/git-prompt.plugin.zsh" >> ${ZSH}
+
   
   sudo chmod 755 -R ~/.oh-my-zsh/plugins
   sudo chsh -s $(which zsh) $(whoami)
@@ -173,6 +175,8 @@ EOM
   echo    ###### configure the shortcut key ######
   echo "open show/hide -> press F6 -> press the \"+ Add\" -> select \"Show/hide main window\" -> add shortcut \"ctrl+\`"
   read -p "press ENTER when done"  
+
+##################################################
       
 set +x
 popd > /dev/null
