@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-.idea/
-
+.idea/**
+.idea/**/*.xml
 
 /helm/charts/spark/spark-2.4.5/
