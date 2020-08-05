@@ -1,8 +1,9 @@
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="/home/elevy/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -12,7 +13,7 @@ ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -64,11 +65,11 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt zsh-autosuggestions)
+plugins=(git zsh-autosuggestions git-prompt)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,22 +100,26 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias python=python3
-
-export DOCKER_HOST=tcp://localhost:2375
-
-cd /opt/dev/ginger
-
 source ~/.oh-my-zsh/plugins/git-prompt/git-prompt.plugin.zsh
+cd /opt/dev/dotfiles
 
-k port-forward services/ginger-spark-webui 8088:8088 &
-k port-forward services/ginger-spark-zeppelin 9000:8080 &
-k port-forward services/ginger-jupyter-proxy-public 8888:80 &
+source <(kubectl completion zsh)
+alias k=kubectl
+complete -F __start_kubectl k
 
-ssh-add ~/.ssh/tr-key.pem 
+source ~/.k8s
 
-source ~/.alias
-source ~/.path_update
-source ~/tr_bash.sh
-source ~/tr_myssh.sh
+
+# cd /opt/dev/ginger
+
+# export DOCKER_HOST=tcp://localhost:2375
+# k port-forward services/ginger-spark-webui 8088:8088 &
+# k port-forward services/ginger-spark-zeppelin 9000:8080 &
+# k port-forward services/ginger-jupyter-proxy-public 8888:80 &
+
+# source ~/.alias
+# source ~/.path_update
+# source ~/tr_bash.sh
+# source ~/tr_myssh.sh
 
 source ~/.k8s

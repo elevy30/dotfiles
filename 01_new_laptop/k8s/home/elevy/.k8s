@@ -13,20 +13,27 @@ start_s3d(){
 	if [ -z "${k3s_container}" ]
 	then
 	      echo "k3s_container=$k3s_container is NOT RUNNING (run k3d start)"
-	      k3d start
+	      k3d cluster start ginger
 	else
 	      echo "k3s_container=$k3s_container is RUNNING"
 	fi
 
-	echo "setting KUBECONFIG to $(k3d get-kubeconfig --name='k3s-default')"
-	export KUBECONFIG="$(k3d get-kubeconfig --name='k3s-default')"
+	echo "setting KUBECONFIG to $(k3d kubeconfig get ginger)"
+	export KUBECONFIG="$(k3d kubeconfig get ginger)"
 
+  kubectl config set-cluster k3s-ginger
+	kubectl config use-context k3s-ginger
+
+	echo "---------------> kubectl get nodes <---------------"
 	kubectl get nodes
+	echo "---------------> kubectl config view - Show Merged kubeconfig settings. <---------------"
+  kubectl config view
+	echo "---------------> kubectl config current-context <---------------"
+  kubectl config current-context
+	echo "---------------> kubectl cluster-info  <---------------"
+  kubectl cluster-info
 
-	kubectl config set-cluster k3s-default
-	kubectl config use-context k3s-default
-
-	echo "setting namesapce=local"
+	echo "---------------> kubens local - setting namesapce=local <---------------"
 	#kubens local
 }
 
@@ -38,14 +45,14 @@ connect_to_gcp(){
 
 
 while true ; do
-	echo -n "Would you like to connect to remote GCP(r) or to local S3D(l) Skip(s): "
+	echo -n "Would you like to connect to remote GCP(g) or to local S3D(3) Skip(s): "
 	read -r action
 	case "$action" in
-		r)
+		g)
 			connect_to_gcp
 			break
 			;;
-		l)
+		3)
 			start_s3d
 			break
 			;;

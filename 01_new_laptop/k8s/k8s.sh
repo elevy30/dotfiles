@@ -19,11 +19,7 @@ ROOT="$(pwd)/.."
 echo "K8S_FOLDER=${K8S_FOLDER}"
 echo "ROOT=${ROOT}"
 
-
-
 source "${K8S_FOLDER}/functions.sh"
-
-
 ##################################################
 
 #ask remove_docker
