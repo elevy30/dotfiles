@@ -2,6 +2,7 @@
 #### - install ubuntu on window
 #### - install docker on window
 #### - install docker
+https://docs.docker.com/engine/install/ubuntu/
 #### - install python
 https://medium.com/@sebagomez/installing-the-docker-client-on-ubuntus-windows-subsystem-for-linux-612b392a44c4
 #### - make sure docker ps working 'docker ps'

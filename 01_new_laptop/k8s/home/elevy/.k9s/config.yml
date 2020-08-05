@@ -10,8 +10,8 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: k3s-default
-  currentCluster: k3s-default
+  currentContext: k3d-ginger
+  currentCluster: k3d-ginger
   clusters:
     k3s-default:
       namespace:

@@ -22,12 +22,11 @@ echo "ROOT=${ROOT}"
 echo "SETUP=${SETUP}"
 echo "TEMP=${TEMP}"
 
-source "${SETUP}/util.sh"
+source "${SETUP}/functions.sh"
 
 sudo mkdir -p "${TEMP}"
 sudo chmod 777 -R "${TEMP}"
 cd "${TEMP}"
-
 
 #install_chrome
 #install_desktop
